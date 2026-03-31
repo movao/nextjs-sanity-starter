@@ -32,7 +32,7 @@
 
 ### HeroImmersive
 
-**Path:** `src/sections/hero/HeroImmersive.astro`
+**Path:** `src/sections/hero/HeroImmersive.tsx`
 **ID:** `#hero`
 
 **Layout:** Full-screen (min-h-screen), centered text over a primary-gradient background. Optional background image overlaid at 20% opacity. Decorative blur circles in accent color. Scroll indicator at bottom. Two CTAs side by side (primary button + text link to #services).
@@ -57,7 +57,7 @@
 
 ### HeroEditorial
 
-**Path:** `src/sections/hero/HeroEditorial.astro`
+**Path:** `src/sections/hero/HeroEditorial.tsx`
 **ID:** `#hero`
 
 **Layout:** Two-column grid (text left, image right) on desktop. Single column stacked on mobile. Image uses `ImageSlot` with 4:3 aspect ratio. Decorative offset shadow behind image. Two CTAs (primary button + text link).
@@ -82,7 +82,7 @@
 
 ### HeroMinimal
 
-**Path:** `src/sections/hero/HeroMinimal.astro`
+**Path:** `src/sections/hero/HeroMinimal.tsx`
 **ID:** `#hero`
 
 **Layout:** Left-aligned large headline, optional subheadline, single text-link CTA with arrow. No image. Minimum 80vh height. Clean whitespace-driven design.
@@ -108,7 +108,7 @@
 
 ### FeaturesGrid
 
-**Path:** `src/sections/features/FeaturesGrid.astro`
+**Path:** `src/sections/features/FeaturesGrid.tsx`
 **ID:** `#features`
 
 **Layout:** Section heading centered, then a responsive grid of feature cards (3 columns on desktop, 2 on tablet, 1 on mobile). Each card has optional icon, title, description. Standard card pattern with hover effects.
@@ -139,7 +139,7 @@
 
 ### FeaturesBento
 
-**Path:** `src/sections/features/FeaturesBento.astro`
+**Path:** `src/sections/features/FeaturesBento.tsx`
 **ID:** `#features`
 
 **Layout:** Bento grid (3-column on desktop). First item spans 2 columns and 2 rows (larger card). Fourth item spans 2 columns. All others are single cells. Decorative gradient blur in top-right of each card. Auto-rows with equal height.
@@ -164,7 +164,7 @@
 
 ### FeaturesAlternating
 
-**Path:** `src/sections/features/FeaturesAlternating.astro`
+**Path:** `src/sections/features/FeaturesAlternating.tsx`
 **ID:** `#features`
 
 **Layout:** Vertically stacked feature rows. Each row is a 2-column grid (text + image). Odd rows: text left, image right. Even rows: text right, image left. Large vertical spacing (space-y-24) between rows. Each feature gets its own `ImageSlot`.
@@ -191,7 +191,7 @@
 
 ### ServicesCards
 
-**Path:** `src/sections/services/ServicesCards.astro`
+**Path:** `src/sections/services/ServicesCards.tsx`
 **ID:** `#services`
 
 **Layout:** Centered heading + responsive grid of service cards (3 columns desktop, 2 tablet, 1 mobile). Identical layout to FeaturesGrid but with Sanity `_id` field on each service. Standard card pattern with icon hover effect.
@@ -225,7 +225,7 @@
 
 ### AboutSplit
 
-**Path:** `src/sections/about/AboutSplit.astro`
+**Path:** `src/sections/about/AboutSplit.tsx`
 **ID:** `#about`
 
 **Layout:** Two-column grid (image left, text + highlights right). Image uses ImageSlot with 4:3 aspect. Text side has heading, paragraph, and optional highlight grid (2x2). Each highlight is a small card with a bold value and label.
@@ -258,7 +258,7 @@
 
 ### StatsGrid
 
-**Path:** `src/sections/stats/StatsGrid.astro`
+**Path:** `src/sections/stats/StatsGrid.tsx`
 **ID:** `#stats`
 
 **Layout:** Centered heading, then 4-column grid (2 on mobile) of stat items. Each stat shows a large number in primary color (display size) with a label below. Clean, no cards — just numbers on background.
@@ -290,7 +290,7 @@
 
 ### StatsHighlight
 
-**Path:** `src/sections/stats/StatsHighlight.astro`
+**Path:** `src/sections/stats/StatsHighlight.tsx`
 **ID:** `#stats-highlight`
 
 **Layout:** One featured stat displayed large in a card (text-6xl/7xl), followed by remaining stats in a 3-column grid below. The first item in the array becomes the hero stat.
@@ -309,7 +309,7 @@
 
 ### ProcessSteps
 
-**Path:** `src/sections/process/ProcessSteps.astro`
+**Path:** `src/sections/process/ProcessSteps.tsx`
 **ID:** `#process-steps`
 
 **Layout:** 4-column horizontal grid on desktop (2 on tablet, 1 on mobile). Each step has a numbered circle at top (or icon), connecting horizontal line between steps, and a card below with title and description.
@@ -340,7 +340,7 @@
 
 ### ProcessTimeline
 
-**Path:** `src/sections/process/ProcessTimeline.astro`
+**Path:** `src/sections/process/ProcessTimeline.tsx`
 **ID:** `#process-timeline`
 
 **Layout:** Vertical timeline with a center line on desktop (left-aligned on mobile). Steps alternate left/right of the timeline. Each step has a numbered circle on the line and a card extending to the side.
@@ -359,7 +359,7 @@
 
 ### PricingCards
 
-**Path:** `src/sections/pricing/PricingCards.astro`
+**Path:** `src/sections/pricing/PricingCards.tsx`
 **ID:** `#pricing`
 
 **Layout:** Centered heading, then responsive card grid (3 columns desktop, 2 tablet, 1 mobile). Each card shows package name, price (display size), optional period, feature checklist, and CTA button. One package can be highlighted (badge + primary border + tinted bg).
@@ -393,7 +393,7 @@
 
 ### PricingTable
 
-**Path:** `src/sections/pricing/PricingTable.astro`
+**Path:** `src/sections/pricing/PricingTable.tsx`
 **ID:** `#pricing-table`
 
 **Layout:** Feature comparison table on desktop (rows = features, columns = packages). Checkmarks for included features, dashes for excluded. Mobile fallback shows cards instead. CTA buttons in table footer.
@@ -412,7 +412,7 @@
 
 ### TestimonialsCarousel
 
-**Path:** `src/sections/testimonials/TestimonialsCarousel.astro`
+**Path:** `src/sections/testimonials/TestimonialsCarousel.tsx`
 **ID:** `#testimonials`
 
 **Layout:** Horizontal scrolling carousel of testimonial cards. Each card has optional star rating, quote text, and author info with role. Navigation prev/next buttons appear when > 3 testimonials. Cards are fixed-width (1/3 on desktop, 1/2 tablet, full mobile). Section background is muted.
@@ -445,7 +445,7 @@
 
 ### TestimonialsGrid
 
-**Path:** `src/sections/testimonials/TestimonialsGrid.astro`
+**Path:** `src/sections/testimonials/TestimonialsGrid.tsx`
 **ID:** `#testimonials`
 
 **Layout:** Static grid of testimonial cards (3 columns desktop, 2 tablet, 1 mobile). Same card design as carousel but in a grid layout. No JavaScript needed.
@@ -464,7 +464,7 @@
 
 ### TeamGrid
 
-**Path:** `src/sections/team/TeamGrid.astro`
+**Path:** `src/sections/team/TeamGrid.tsx`
 **ID:** `#team`
 
 **Layout:** Grid of team member cards (3 columns desktop, 2 tablet). Each member has a circular portrait (w-40 h-40) with ring shadow, name, role in primary color, and optional bio text. Section uses `section-alt` (muted background).
@@ -497,7 +497,7 @@
 
 ### TeamMinimal
 
-**Path:** `src/sections/team/TeamMinimal.astro`
+**Path:** `src/sections/team/TeamMinimal.tsx`
 **ID:** `#team`
 
 **Layout:** Flex-wrap row of small portraits (w-20/w-24 on md) centered. Each has name and role below. Very compact. No bio text. Uses `bg-background`.
@@ -518,7 +518,7 @@
 
 ### FaqAccordion
 
-**Path:** `src/sections/faq/FaqAccordion.astro`
+**Path:** `src/sections/faq/FaqAccordion.tsx`
 **ID:** `#faq`
 
 **Layout:** Centered narrow column (max-w-3xl). Native HTML `<details>` accordion. Each item is a card with question as summary and answer as expandable content. Chevron rotates on open. Section uses `section-alt`.
@@ -551,7 +551,7 @@
 
 ### CtaCompact
 
-**Path:** `src/sections/cta/CtaCompact.astro`
+**Path:** `src/sections/cta/CtaCompact.tsx`
 **ID:** `#cta`
 
 **Layout:** Centered card (max-w-3xl) with heading + text on left, button on right (stacks on mobile). Card uses bg-card with border. Clean, contained feel.
@@ -575,7 +575,7 @@
 
 ### CtaFullwidth
 
-**Path:** `src/sections/cta/CtaFullwidth.astro`
+**Path:** `src/sections/cta/CtaFullwidth.tsx`
 **ID:** `#cta`
 
 **Layout:** Full-width primary background with decorative accent blur circles. Centered text with heading, subheading, and inverted button (bg-background text-foreground). No section wrapper (custom padding py-20/28).
@@ -599,7 +599,7 @@
 
 ### CtaBanner
 
-**Path:** `src/sections/cta/CtaBanner.astro`
+**Path:** `src/sections/cta/CtaBanner.tsx`
 **ID:** `#cta-banner`
 
 **Layout:** Horizontal banner with primary background. Text left, button right (stacks on mobile). Uses section padding. Button is inverted (bg-background text-primary).
@@ -625,7 +625,7 @@
 
 ### ContactSplit
 
-**Path:** `src/sections/contact/ContactSplit.astro`
+**Path:** `src/sections/contact/ContactSplit.tsx`
 **ID:** `#contact`
 
 **Layout:** Two-column grid. Left: contact info (address, phone, email with icons) + embedded OpenStreetMap. Right: contact form (name, email, phone, message, privacy checkbox, submit). Includes honeypot spam protection.
@@ -647,7 +647,7 @@
 
 ### ContactMinimal
 
-**Path:** `src/sections/contact/ContactMinimal.astro`
+**Path:** `src/sections/contact/ContactMinimal.tsx`
 **ID:** `#contact`
 
 **Layout:** Single centered column (max-w-2xl). Just a contact form (name + email side by side, message, privacy checkbox, submit). No contact info, no map. Honeypot included.
@@ -671,7 +671,7 @@
 
 ### BlogGrid
 
-**Path:** `src/sections/blog/BlogGrid.astro`
+**Path:** `src/sections/blog/BlogGrid.tsx`
 **ID:** `#blog`
 
 **Layout:** Responsive card grid (3 columns desktop, 2 tablet, 1 mobile). Each card has an ImageSlot thumbnail (16:10 aspect), date + author metadata, linked title, excerpt (3 lines max), and "Weiterlesen" link. Optional "Alle Beitrage ansehen" button when more posts exist than the limit.
@@ -708,7 +708,7 @@
 
 ### GalleryMasonry
 
-**Path:** `src/sections/gallery/GalleryMasonry.astro`
+**Path:** `src/sections/gallery/GalleryMasonry.tsx`
 **ID:** `#gallery`
 
 **Layout:** CSS columns masonry layout (3 columns desktop, 2 tablet, 1 mobile). Images maintain natural aspect ratios. Each image in a card with optional caption below. Placeholder gradient when no src.
@@ -739,7 +739,7 @@
 
 ### GalleryGrid
 
-**Path:** `src/sections/gallery/GalleryGrid.astro`
+**Path:** `src/sections/gallery/GalleryGrid.tsx`
 **ID:** `#gallery-grid`
 
 **Layout:** Uniform grid (3 columns desktop, 2 mobile). All images forced to square aspect ratio with object-cover. Hover zoom effect on images. Card with optional caption.
@@ -758,7 +758,7 @@
 
 ### LogoBar
 
-**Path:** `src/sections/partners/LogoBar.astro`
+**Path:** `src/sections/partners/LogoBar.tsx`
 **ID:** `#partners`
 
 **Layout:** Flex-wrap row of partner cards centered. Each card shows a logo image (grayscale, fades to color on hover) or text fallback. Section uses muted background.
@@ -790,7 +790,7 @@
 
 ### MapEmbed
 
-**Path:** `src/sections/map/MapEmbed.astro`
+**Path:** `src/sections/map/MapEmbed.tsx`
 **ID:** `#map`
 
 **Layout:** Centered heading + full-width OpenStreetMap iframe (400px height) in a rounded card. OSM attribution below.
@@ -817,7 +817,7 @@
 
 ### OpeningHoursTable
 
-**Path:** `src/sections/opening-hours/OpeningHoursTable.astro`
+**Path:** `src/sections/opening-hours/OpeningHoursTable.tsx`
 **ID:** `#hours`
 
 **Layout:** Narrow centered column (max-w-lg). Single card with rows for each day. Current day is highlighted (muted bg, primary text, "Heute" badge). Uses `section-alt`. Client-side JS highlights today.
