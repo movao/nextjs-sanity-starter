@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, type ReactNode } from 'react';
+import { useState, useEffect, useCallback, useRef, type ReactNode } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 
 /* ------------------------------------------------
@@ -142,16 +142,23 @@ export default function PreviewShell({
 }) {
   const [ratings, setRatings] = useState<RatingsMap>({});
   const [hydrated, setHydrated] = useState(false);
+  const saveCountRef = useRef(0);
 
   // Load from localStorage on mount
   useEffect(() => {
-    setRatings(loadRatings());
+    const loaded = loadRatings();
+    setRatings(loaded);
     setHydrated(true);
   }, []);
 
-  // Persist whenever ratings change (after hydration)
+  // Persist whenever ratings change (skip the initial load)
   useEffect(() => {
-    if (hydrated) saveRatings(ratings);
+    if (!hydrated) return;
+    // Skip the first render after hydration (that's the load, not a user action)
+    saveCountRef.current += 1;
+    if (saveCountRef.current > 1) {
+      saveRatings(ratings);
+    }
   }, [ratings, hydrated]);
 
   const handleRatingChange = useCallback((name: string, update: Partial<SectionRating>) => {

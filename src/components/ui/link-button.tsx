@@ -29,9 +29,9 @@ export function LinkButton({
         variant === 'default' && 'bg-primary text-background hover:bg-primary/90',
         variant === 'outline' && 'border-2 border-primary text-primary hover:bg-muted',
         variant === 'ghost' && 'text-foreground/60 hover:text-foreground hover:bg-muted',
-        // Sizes
-        size === 'sm' && 'px-4 py-2 text-sm',
-        size === 'default' && 'px-8 py-3 text-base',
+        // Sizes — auf 8px-Raster, min 16px Schrift
+        size === 'sm' && 'px-6 py-2.5 text-base',
+        size === 'default' && 'px-8 py-3.5 text-base',
         size === 'lg' && 'px-10 py-4 text-lg',
         className,
       )}

@@ -33,7 +33,7 @@
   --color-success: #22c55e;
 
   /* Fonts — Fallbacks */
-  --font-heading: 'Clash Display', sans-serif;
+  --font-heading: 'Cabinet Grotesk', sans-serif;
   --font-body: 'Satoshi', sans-serif;
 
   /* Border-Radius — skaliert von --radius (gesetzt durch apply-theme.ts) */

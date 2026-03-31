@@ -10,8 +10,8 @@ import { fontPairings, colorWorlds, spacingPresets, borderRadiusPresets, iconSty
 import type { LayoutArchetypeId } from '../design/profiles';
 
 export const design = {
-  /** Font-Pairing: signature | structure | heritage | statement | warmth | ... */
-  fonts: fontPairings.signature,
+  /** Font-Pairing: structure | heritage | statement | warmth | craft | clarity | bold | ... */
+  fonts: fontPairings.structure,
 
   /** Farbwelt: midnight | cleanSlate | terra | forest | graphite | ivory | ... */
   colors: colorWorlds.cleanSlate,

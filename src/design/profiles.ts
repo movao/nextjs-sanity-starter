@@ -12,15 +12,6 @@
 // Alle Fonts von Fontshare. Selbst gehostet, DSGVO-konform.
 
 export const fontPairings = {
-  signature: {
-    id: 'signature',
-    label: 'Signature',
-    heading: "'Clash Display', sans-serif",
-    headingWeight: '600', // Semibold/Bold
-    body: "'Satoshi', sans-serif",
-    bodyWeight: '400',
-    character: 'Selbstbewusst, modern, eigenständig',
-  },
   structure: {
     id: 'structure',
     label: 'Structure',
@@ -500,49 +491,49 @@ interface BranchRules {
 export const branchMatrix: Record<string, BranchRules> = {
   gesundheit: {
     label: 'Gesundheit & Therapie',
-    fonts:    { signature: 'yes', structure: 'yes', warmth: 'yes', heritage: 'maybe', clarity: 'yes', refined: 'yes', craft: 'maybe' },
+    fonts:    { structure: 'yes', warmth: 'yes', heritage: 'maybe', clarity: 'yes', refined: 'yes', craft: 'maybe' },
     colors:   { cleanSlate: 'yes', terra: 'yes', forest: 'yes', ivory: 'yes', ocean: 'yes', rose: 'maybe', sand: 'yes' },
     layouts:  { immersive: 'yes', editorial: 'yes', cardBased: 'yes', minimalStatement: 'maybe' },
     spacings: { breathe: 'yes', balanced: 'yes' },
   },
   immobilien: {
     label: 'Immobilien & Makler',
-    fonts:    { signature: 'yes', structure: 'yes', heritage: 'yes', statement: 'yes', warmth: 'maybe', editorial: 'yes', minimal: 'yes', refined: 'maybe' },
+    fonts:    { structure: 'yes', heritage: 'yes', statement: 'yes', warmth: 'maybe', editorial: 'yes', minimal: 'yes', refined: 'maybe' },
     colors:   { midnight: 'yes', cleanSlate: 'yes', terra: 'yes', graphite: 'yes', ivory: 'yes', forest: 'maybe', slate: 'yes', aubergine: 'maybe' },
     layouts:  { immersive: 'yes', editorial: 'yes', cardBased: 'yes', minimalStatement: 'yes' },
     spacings: { breathe: 'yes', balanced: 'yes', dense: 'maybe' },
   },
   handwerk: {
     label: 'Handwerk & Technik',
-    fonts:    { signature: 'yes', structure: 'yes', statement: 'yes', heritage: 'maybe', warmth: 'maybe', bold: 'yes', craft: 'yes', clarity: 'maybe' },
+    fonts:    { structure: 'yes', statement: 'yes', heritage: 'maybe', warmth: 'maybe', bold: 'yes', craft: 'yes', clarity: 'maybe' },
     colors:   { cleanSlate: 'yes', terra: 'yes', graphite: 'yes', midnight: 'maybe', forest: 'maybe', sunset: 'yes', sand: 'maybe', slate: 'yes' },
     layouts:  { editorial: 'yes', cardBased: 'yes', immersive: 'maybe', minimalStatement: 'maybe' },
     spacings: { balanced: 'yes', dense: 'yes', breathe: 'maybe' },
   },
   gastronomie: {
     label: 'Gastronomie & Hospitality',
-    fonts:    { signature: 'yes', heritage: 'yes', warmth: 'yes', statement: 'maybe', structure: 'maybe', craft: 'yes', editorial: 'yes', contrast: 'maybe' },
+    fonts:    { heritage: 'yes', warmth: 'yes', statement: 'maybe', structure: 'maybe', craft: 'yes', editorial: 'yes', contrast: 'maybe' },
     colors:   { midnight: 'yes', terra: 'yes', ivory: 'yes', cleanSlate: 'maybe', forest: 'maybe', sunset: 'yes', sand: 'yes', aubergine: 'maybe' },
     layouts:  { immersive: 'yes', editorial: 'yes', minimalStatement: 'yes', cardBased: 'maybe' },
     spacings: { breathe: 'yes', balanced: 'yes' },
   },
   recht: {
     label: 'Recht & Finanzen',
-    fonts:    { signature: 'yes', structure: 'yes', heritage: 'yes', warmth: 'maybe', refined: 'yes', editorial: 'yes', minimal: 'maybe' },
+    fonts:    { structure: 'yes', heritage: 'yes', warmth: 'maybe', refined: 'yes', editorial: 'yes', minimal: 'maybe' },
     colors:   { midnight: 'yes', cleanSlate: 'yes', graphite: 'yes', ivory: 'maybe', slate: 'yes', ocean: 'maybe', aubergine: 'maybe' },
     layouts:  { editorial: 'yes', cardBased: 'yes', minimalStatement: 'maybe', immersive: 'maybe' },
     spacings: { balanced: 'yes', breathe: 'maybe' },
   },
   kreativ: {
     label: 'Kreativ & Agentur',
-    fonts:    { signature: 'yes', structure: 'yes', heritage: 'yes', statement: 'yes', warmth: 'yes', bold: 'yes', contrast: 'yes', editorial: 'yes', minimal: 'yes', craft: 'maybe', clarity: 'maybe', refined: 'maybe' },
+    fonts:    { structure: 'yes', heritage: 'yes', statement: 'yes', warmth: 'yes', bold: 'yes', contrast: 'yes', editorial: 'yes', minimal: 'yes', craft: 'maybe', clarity: 'maybe', refined: 'maybe' },
     colors:   { midnight: 'yes', cleanSlate: 'yes', terra: 'yes', forest: 'yes', graphite: 'yes', ivory: 'yes', ocean: 'yes', sunset: 'yes', rose: 'yes', slate: 'yes', aubergine: 'yes', sand: 'yes' },
     layouts:  { immersive: 'yes', editorial: 'yes', cardBased: 'yes', minimalStatement: 'yes' },
     spacings: { breathe: 'yes', balanced: 'yes', dense: 'yes' },
   },
   beauty: {
     label: 'Beauty & Wellness',
-    fonts:    { signature: 'yes', heritage: 'yes', warmth: 'yes', structure: 'maybe', refined: 'yes', contrast: 'maybe', craft: 'maybe' },
+    fonts:    { heritage: 'yes', warmth: 'yes', structure: 'maybe', refined: 'yes', contrast: 'maybe', craft: 'maybe' },
     colors:   { terra: 'yes', forest: 'yes', ivory: 'yes', cleanSlate: 'maybe', rose: 'yes', sand: 'yes', aubergine: 'maybe' },
     layouts:  { immersive: 'yes', editorial: 'yes', minimalStatement: 'yes', cardBased: 'maybe' },
     spacings: { breathe: 'yes', balanced: 'yes' },

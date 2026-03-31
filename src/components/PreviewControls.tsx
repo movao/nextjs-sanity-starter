@@ -64,7 +64,7 @@ const iconStyleKeys = Object.keys(iconStyles) as IconStyleKey[];
 export default function PreviewControls() {
   const [open, setOpen] = useState(false);
   const [color, setColor] = useState<ColorWorldKey>('cleanSlate');
-  const [font, setFont] = useState<FontKey>('signature');
+  const [font, setFont] = useState<FontKey>('structure');
   const [spacing, setSpacing] = useState<SpacingKey>('balanced');
   const [radius, setRadius] = useState<RadiusKey>('soft');
   const [iconStyle, setIconStyle] = useState<IconStyleKey>('filledBox');
