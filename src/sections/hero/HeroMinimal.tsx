@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config';
+import { Button } from '@/components/ui/button';
 
 export interface Props {
   headline?: string;
@@ -28,9 +29,11 @@ export default function HeroMinimal({
           )}
 
           <div className="mt-12 animate-in animate-delay-2">
-            <a
-              href={ctaHref}
-              className="group inline-flex items-center text-lg font-medium text-primary hover:text-primary/80 transition-colors"
+            <Button
+              render={<a href={ctaHref} />}
+              size="lg"
+              variant="outline"
+              className="group inline-flex items-center text-lg font-medium text-primary hover:text-primary/80 transition-colors border-transparent bg-transparent hover:bg-transparent"
             >
               {ctaText}
               <svg
@@ -39,7 +42,7 @@ export default function HeroMinimal({
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </Button>
           </div>
         </div>
       </div>

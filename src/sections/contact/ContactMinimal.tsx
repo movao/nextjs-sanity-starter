@@ -1,3 +1,7 @@
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+
 interface ContactMinimalProps {
   heading?: string;
   subheading?: string;
@@ -27,14 +31,14 @@ export default function ContactMinimal({
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="contact-min-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
-                <input type="text" id="contact-min-name" name="name" required
+                <Input type="text" id="contact-min-name" name="name" required
                        className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
                        placeholder="Ihr Name" />
               </div>
 
               <div>
                 <label htmlFor="contact-min-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
-                <input type="email" id="contact-min-email" name="email" required
+                <Input type="email" id="contact-min-email" name="email" required
                        className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
                        placeholder="ihre@email.de" />
               </div>
@@ -42,7 +46,7 @@ export default function ContactMinimal({
 
             <div>
               <label htmlFor="contact-min-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
-              <textarea id="contact-min-message" name="message" rows={5} required
+              <Textarea id="contact-min-message" name="message" rows={5} required
                         className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
                         placeholder="Wie können wir Ihnen helfen?" />
             </div>
@@ -58,9 +62,9 @@ export default function ContactMinimal({
               </label>
             </div>
 
-            <button type="submit" className="btn-primary w-full py-4">
+            <Button type="submit" className="btn-primary w-full py-4">
               Nachricht senden
-            </button>
+            </Button>
           </form>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import IconWrapper from '@/components/ui/IconWrapper';
-import { Card, CardContent } from '@/components/ui/card';
 
 export interface Feature {
   title: string;
@@ -13,7 +12,7 @@ export interface Props {
   subheading?: string;
 }
 
-export default function FeaturesGrid({
+export default function FeaturesIconLeft({
   features = [],
   heading = 'Unsere Leistungen',
   subheading = 'Was uns auszeichnet',
@@ -26,29 +25,28 @@ export default function FeaturesGrid({
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate="fade-up">
+        <div className="flex flex-col divide-y divide-border" data-animate="fade-up">
           {features.map((feature, i) => (
-            <Card
+            <div
               key={i}
-              className="group p-8 rounded-2xl bg-card border border-border
-                         hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5
-                         transition-all duration-300"
-              data-delay={`${((i % 3) + 1) * 100}`}
+              className="group flex items-start gap-8 py-8 first:pt-0 last:pb-0"
+              data-delay={`${(i + 1) * 100}`}
             >
-              <CardContent className="p-0">
-                {feature.icon && (
-                  <IconWrapper icon={feature.icon} className="mb-4" />
-                )}
+              {feature.icon && (
+                <div className="shrink-0">
+                  <IconWrapper icon={feature.icon} />
+                </div>
+              )}
 
+              <div className="flex-1 min-w-0">
                 <h3 className="text-xl font-heading text-foreground mb-2">
                   {feature.title}
                 </h3>
-
-                <p className="text-foreground/60 leading-relaxed">
+                <p className="text-foreground/60 leading-relaxed text-base max-w-2xl">
                   {feature.description}
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

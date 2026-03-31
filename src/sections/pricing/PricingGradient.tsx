@@ -12,19 +12,19 @@ interface Package {
   ctaText?: string;
 }
 
-interface PricingCardsProps {
+interface PricingGradientProps {
   packages?: Package[];
   heading?: string;
   subheading?: string;
 }
 
-export default function PricingCards({
+export default function PricingGradient({
   packages = [],
   heading = 'Unsere Pakete',
-  subheading = 'Finden Sie das passende Angebot für Ihre Bedürfnisse',
-}: PricingCardsProps) {
+  subheading = 'Das passende Angebot für jeden Bedarf',
+}: PricingGradientProps) {
   return (
-    <section id="pricing" className="section bg-background">
+    <section id="pricing-gradient" className="section bg-background">
       <div className="container-narrow">
         <div className="text-center mb-8" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
@@ -36,31 +36,46 @@ export default function PricingCards({
             <Card
               key={i}
               className={cn(
-                'group relative p-8 rounded-2xl transition-all duration-300',
-                'hover:shadow-lg hover:shadow-primary/5',
+                'group relative p-8 rounded-2xl transition-all duration-300 overflow-hidden',
+                'hover:shadow-lg',
                 pkg.highlighted
-                  ? 'bg-primary/5 border-primary'
+                  ? 'bg-gradient-to-br from-primary to-accent border-0 text-background'
                   : 'bg-card border-border hover:border-primary/20',
               )}
               data-animate="fade-up"
               data-delay={i * 100}
             >
               {pkg.highlighted && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-background text-sm font-medium">
-                  Beliebt
+                <Badge className="absolute top-4 right-4 px-3 py-1 rounded-full bg-background/20 text-background text-xs font-medium backdrop-blur-sm">
+                  Empfohlen
                 </Badge>
               )}
 
               <CardHeader className="p-0 mb-6">
-                <CardTitle className="text-xl font-heading text-foreground mb-2">
+                <CardTitle
+                  className={cn(
+                    'text-xl font-heading mb-2',
+                    pkg.highlighted ? 'text-background' : 'text-foreground',
+                  )}
+                >
                   {pkg.name}
                 </CardTitle>
                 <div>
-                  <span className="text-4xl font-heading text-primary">
+                  <span
+                    className={cn(
+                      'text-4xl font-heading',
+                      pkg.highlighted ? 'text-background' : 'text-primary',
+                    )}
+                  >
                     {pkg.price}
                   </span>
                   {pkg.period && (
-                    <span className="text-foreground/60 text-subtitle ml-1">
+                    <span
+                      className={cn(
+                        'text-subtitle ml-1',
+                        pkg.highlighted ? 'text-background/70' : 'text-foreground/60',
+                      )}
+                    >
                       / {pkg.period}
                     </span>
                   )}
@@ -70,9 +85,18 @@ export default function PricingCards({
               <CardContent className="p-0 mb-8">
                 <ul className="space-y-3">
                   {pkg.features.map((feature, fi) => (
-                    <li key={fi} className="flex items-start gap-3 text-foreground/60">
+                    <li
+                      key={fi}
+                      className={cn(
+                        'flex items-start gap-3',
+                        pkg.highlighted ? 'text-background/80' : 'text-foreground/60',
+                      )}
+                    >
                       <svg
-                        className="w-5 h-5 text-primary shrink-0 mt-0.5"
+                        className={cn(
+                          'w-5 h-5 shrink-0 mt-0.5',
+                          pkg.highlighted ? 'text-background' : 'text-primary',
+                        )}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -88,16 +112,16 @@ export default function PricingCards({
 
               <CardFooter className="p-0">
                 <Button
-                  render={<a href="#contact" />}
-                  variant={pkg.highlighted ? 'default' : 'outline'}
+                 
+                  variant={pkg.highlighted ? 'outline' : 'outline'}
                   className={cn(
                     'w-full py-3 px-6 rounded-xl font-medium transition-colors',
                     pkg.highlighted
-                      ? 'bg-primary text-background hover:bg-primary/90'
+                      ? 'bg-background text-foreground hover:bg-background/90 border-0'
                       : 'bg-muted text-foreground hover:bg-primary hover:text-background',
                   )}
                 >
-                  {pkg.ctaText || 'Auswählen'}
+                  <a href="#contact">{pkg.ctaText || 'Auswählen'}</a>
                 </Button>
               </CardFooter>
             </Card>

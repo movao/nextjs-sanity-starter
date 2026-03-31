@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button';
+
 export interface Props {
   heading?: string;
   text?: string;
@@ -30,15 +32,16 @@ export default function CtaBanner({
 
           {/* Button */}
           <div className="shrink-0" data-animate="fade-up" data-delay="200">
-            <a
-              href={buttonHref}
+            <Button
+              render={<a href={buttonHref} />}
+              variant="outline"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl
                          bg-background text-primary font-heading font-semibold
                          hover:bg-background/90 hover:shadow-lg
                          transition-all duration-300"
             >
               {buttonText}
-            </a>
+            </Button>
           </div>
         </div>
       </div>

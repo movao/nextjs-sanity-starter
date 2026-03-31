@@ -1,4 +1,7 @@
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 
 interface Package {
   name: string;
@@ -95,17 +98,18 @@ export default function PricingTable({
                 <td className="p-4" />
                 {packages.map((pkg, pi) => (
                   <td key={pi} className="p-4 text-center">
-                    <a
-                      href="#contact"
+                    <Button
+                      render={<a href="#contact" />}
+                      variant={pkg.highlighted ? 'default' : 'outline'}
                       className={cn(
-                        'inline-block py-3 px-6 rounded-xl font-medium transition-colors',
+                        'py-3 px-6 rounded-xl font-medium transition-colors',
                         pkg.highlighted
                           ? 'bg-primary text-background hover:bg-primary/90'
                           : 'bg-muted text-foreground hover:bg-primary hover:text-background',
                       )}
                     >
                       {pkg.ctaText || 'Auswählen'}
-                    </a>
+                    </Button>
                   </td>
                 ))}
               </tr>
@@ -116,10 +120,10 @@ export default function PricingTable({
         {/* Mobile cards fallback */}
         <div className="md:hidden space-y-6" data-animate="fade-up" data-delay="100">
           {packages.map((pkg, i) => (
-            <div
+            <Card
               key={i}
               className={cn(
-                'relative p-6 rounded-2xl border',
+                'relative p-6 rounded-2xl',
                 pkg.highlighted
                   ? 'bg-primary/5 border-primary'
                   : 'bg-card border-border',
@@ -127,54 +131,61 @@ export default function PricingTable({
               data-delay={i * 100}
             >
               {pkg.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-background text-sm font-medium">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-background text-sm font-medium">
                   Beliebt
-                </span>
+                </Badge>
               )}
 
-              <h3 className="text-xl font-heading text-foreground mb-1">{pkg.name}</h3>
-              <div className="mb-4">
-                <span className="text-xl font-heading text-primary">{pkg.price}</span>
-                {pkg.period && (
-                  <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
-                )}
-              </div>
+              <CardHeader className="p-0 mb-4">
+                <CardTitle className="text-xl font-heading text-foreground mb-1">{pkg.name}</CardTitle>
+                <div>
+                  <span className="text-xl font-heading text-primary">{pkg.price}</span>
+                  {pkg.period && (
+                    <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
+                  )}
+                </div>
+              </CardHeader>
 
-              <ul className="space-y-2 mb-6">
-                {allFeatures.map((feature, fi) => (
-                  <li key={fi} className="flex items-center gap-2 text-base">
-                    {pkg.features.includes(feature) ? (
-                      <svg
-                        className="w-4 h-4 text-primary shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    ) : (
-                      <span className="w-4 h-4 text-foreground/20 text-center shrink-0">&mdash;</span>
-                    )}
-                    <span className={pkg.features.includes(feature) ? 'text-foreground' : 'text-foreground/40'}>
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <CardContent className="p-0 mb-6">
+                <ul className="space-y-2">
+                  {allFeatures.map((feature, fi) => (
+                    <li key={fi} className="flex items-center gap-2 text-base">
+                      {pkg.features.includes(feature) ? (
+                        <svg
+                          className="w-4 h-4 text-primary shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      ) : (
+                        <span className="w-4 h-4 text-foreground/20 text-center shrink-0">&mdash;</span>
+                      )}
+                      <span className={pkg.features.includes(feature) ? 'text-foreground' : 'text-foreground/40'}>
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
 
-              <a
-                href="#contact"
-                className={cn(
-                  'block w-full text-center py-3 px-6 rounded-xl font-medium transition-colors',
-                  pkg.highlighted
-                    ? 'bg-primary text-background hover:bg-primary/90'
-                    : 'bg-muted text-foreground hover:bg-primary hover:text-background',
-                )}
-              >
-                {pkg.ctaText || 'Auswählen'}
-              </a>
-            </div>
+              <CardFooter className="p-0">
+                <Button
+                  render={<a href="#contact" />}
+                  variant={pkg.highlighted ? 'default' : 'outline'}
+                  className={cn(
+                    'w-full py-3 px-6 rounded-xl font-medium transition-colors',
+                    pkg.highlighted
+                      ? 'bg-primary text-background hover:bg-primary/90'
+                      : 'bg-muted text-foreground hover:bg-primary hover:text-background',
+                  )}
+                >
+                  {pkg.ctaText || 'Auswählen'}
+                </Button>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>

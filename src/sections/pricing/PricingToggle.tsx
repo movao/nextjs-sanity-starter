@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -10,25 +13,67 @@ interface Package {
   features: string[];
   highlighted?: boolean;
   ctaText?: string;
+  yearlyPrice?: string;
 }
 
-interface PricingCardsProps {
+interface PricingToggleProps {
   packages?: Package[];
   heading?: string;
   subheading?: string;
 }
 
-export default function PricingCards({
+export default function PricingToggle({
   packages = [],
-  heading = 'Unsere Pakete',
-  subheading = 'Finden Sie das passende Angebot für Ihre Bedürfnisse',
-}: PricingCardsProps) {
+  heading = 'Flexibel planen',
+  subheading = 'Monatlich oder jährlich — Sie entscheiden',
+}: PricingToggleProps) {
+  const [isYearly, setIsYearly] = useState(false);
+
   return (
-    <section id="pricing" className="section bg-background">
+    <section id="pricing-toggle" className="section bg-background">
       <div className="container-narrow">
         <div className="text-center mb-8" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
+        </div>
+
+        {/* Toggle */}
+        <div className="flex items-center justify-center gap-4 mb-12" data-animate="fade-up" data-delay="100">
+          <span
+            className={cn(
+              'text-sm font-medium transition-colors',
+              !isYearly ? 'text-primary' : 'text-foreground/60',
+            )}
+          >
+            Monatlich
+          </span>
+          <button
+            type="button"
+            onClick={() => setIsYearly(!isYearly)}
+            className={cn(
+              'relative inline-flex h-8 w-14 items-center rounded-full transition-colors',
+              isYearly ? 'bg-primary' : 'bg-muted',
+            )}
+            aria-label="Abrechnungszeitraum wechseln"
+          >
+            <span
+              className={cn(
+                'inline-block h-6 w-6 rounded-full bg-background shadow-sm transition-transform',
+                isYearly ? 'translate-x-7' : 'translate-x-1',
+              )}
+            />
+          </button>
+          <span
+            className={cn(
+              'text-sm font-medium transition-colors',
+              isYearly ? 'text-primary' : 'text-foreground/60',
+            )}
+          >
+            Jährlich
+          </span>
+          {isYearly && (
+            <Badge className="bg-primary/10 text-primary border-0 text-xs">Spare 20%</Badge>
+          )}
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,13 +102,11 @@ export default function PricingCards({
                 </CardTitle>
                 <div>
                   <span className="text-4xl font-heading text-primary">
-                    {pkg.price}
+                    {isYearly && pkg.yearlyPrice ? pkg.yearlyPrice : pkg.price}
                   </span>
-                  {pkg.period && (
-                    <span className="text-foreground/60 text-subtitle ml-1">
-                      / {pkg.period}
-                    </span>
-                  )}
+                  <span className="text-foreground/60 text-subtitle ml-1">
+                    / {isYearly ? 'Jahr' : pkg.period || 'Monat'}
+                  </span>
                 </div>
               </CardHeader>
 
@@ -88,7 +131,7 @@ export default function PricingCards({
 
               <CardFooter className="p-0">
                 <Button
-                  render={<a href="#contact" />}
+                 
                   variant={pkg.highlighted ? 'default' : 'outline'}
                   className={cn(
                     'w-full py-3 px-6 rounded-xl font-medium transition-colors',
@@ -97,7 +140,7 @@ export default function PricingCards({
                       : 'bg-muted text-foreground hover:bg-primary hover:text-background',
                   )}
                 >
-                  {pkg.ctaText || 'Auswählen'}
+                  <a href="#contact">{pkg.ctaText || 'Auswählen'}</a>
                 </Button>
               </CardFooter>
             </Card>
