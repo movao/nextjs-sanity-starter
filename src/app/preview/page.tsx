@@ -137,6 +137,11 @@ function CategoryHeader({ id, label, count }: { id: string; label: string; count
 export default function PreviewPage() {
   return (
     <>
+      {/* Auf der Preview-Seite: Scroll-Animationen deaktivieren damit alles sofort sichtbar ist */}
+      <style dangerouslySetInnerHTML={{ __html: `
+        [data-animate] { opacity: 1 !important; transform: none !important; transition: none !important; }
+      `}} />
+
       {/* -- Sticky Navigation -- */}
       <div className="sticky top-16 z-40 bg-background/90 backdrop-blur border-b border-muted">
         <div className="max-w-7xl mx-auto px-4 py-3">
