@@ -51,13 +51,8 @@ function applyRadius(key: RadiusKey) {
 }
 
 function applyIconStyle(key: IconStyleKey) {
+  // CSS-Regeln in globals.css steuern die Sichtbarkeit per html[data-icon-style]
   document.documentElement.setAttribute('data-icon-style', key);
-  // Show/hide the correct icon variant in all IconWrapper instances
-  document.querySelectorAll('[data-icon]').forEach((el) => {
-    const variant = (el as HTMLElement).dataset.icon;
-    (el as HTMLElement).classList.toggle('hidden', variant !== key);
-    if (variant === key) (el as HTMLElement).classList.remove('hidden');
-  });
 }
 
 const colorKeys = Object.keys(colorWorlds) as ColorWorldKey[];

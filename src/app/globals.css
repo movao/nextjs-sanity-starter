@@ -170,6 +170,28 @@
   }
 }
 
+/* ─── Icon-Wrapper: Zeigt nur die aktive Variante ──────── */
+
+.icon-wrapper {
+  display: inline-flex;
+}
+.icon-wrapper .icon-variant {
+  display: none;
+}
+/* Default: Zeige die Variante die dem data-default-icon entspricht */
+.icon-wrapper[data-default-icon="filledBox"] > [data-icon="filledBox"],
+.icon-wrapper[data-default-icon="ring"] > [data-icon="ring"],
+.icon-wrapper[data-default-icon="naked"] > [data-icon="naked"] {
+  display: inline-flex;
+}
+/* Live-Preview Override: html[data-icon-style] überschreibt den Default */
+html[data-icon-style="filledBox"] .icon-wrapper > .icon-variant { display: none; }
+html[data-icon-style="filledBox"] .icon-wrapper > [data-icon="filledBox"] { display: inline-flex; }
+html[data-icon-style="ring"] .icon-wrapper > .icon-variant { display: none; }
+html[data-icon-style="ring"] .icon-wrapper > [data-icon="ring"] { display: inline-flex; }
+html[data-icon-style="naked"] .icon-wrapper > .icon-variant { display: none; }
+html[data-icon-style="naked"] .icon-wrapper > [data-icon="naked"] { display: inline-flex; }
+
 /* ─── Animations ───────────────────────────────────────── */
 
 @keyframes fadeInUp {
