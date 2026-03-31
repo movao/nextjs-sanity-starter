@@ -18,7 +18,7 @@
    3. Section-Padding mindestens 64px
    4. Headlines mindestens 2.5× Body (40px+)
 
-   Stufen: base(16) → lg(21) → xl(28) → title(40) → display(56) → hero(64)
+   Stufen: base(16) → lg(21) → xl(28) → title(40) → display(56)
    Jede Stufe = Vorgänger × 1.333
    ═══════════════════════════════════════════════════════════ */
 
@@ -60,10 +60,7 @@
      xl:      28px  → Zeilenhöhe 40px
      title:   40px  → Zeilenhöhe 48px (Regel: mind. 2.5× Body)
      display: 56px  → Zeilenhöhe 64px
-     hero:    64px  → Zeilenhöhe 72px (für Hero-Headlines)
      ─────────────────────────────────────────────────────── */
-  --text-hero: clamp(2.5rem, 5vw, 4rem);
-  --text-hero--line-height: calc(72 / 64);
   --text-display: clamp(2rem, 4vw, 3.5rem);
   --text-display--line-height: calc(64 / 56);
   --text-title: clamp(1.5rem, 3vw, 2.5rem);
