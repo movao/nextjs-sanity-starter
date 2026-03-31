@@ -45,11 +45,11 @@ export default function TeamMinimal({
                 />
               </div>
 
-              <h3 className="text-base font-heading font-medium text-foreground leading-tight">
+              <h3 className="text-lg font-heading font-semibold text-foreground leading-tight">
                 {member.name}
               </h3>
 
-              <p className="text-sm text-foreground/50 mt-0.5">
+              <p className="text-base text-foreground/50 mt-1">
                 {member.role}
               </p>
             </div>

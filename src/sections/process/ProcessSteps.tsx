@@ -53,7 +53,7 @@ export default function ProcessSteps({
               <div className="p-6 rounded-2xl bg-card border border-border
                               hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5
                               transition-all duration-300 w-full">
-                <h3 className="text-lg font-semibold font-heading text-foreground mb-3">
+                <h3 className="text-xl font-semibold font-heading text-foreground mb-2">
                   {step.title}
                 </h3>
                 <p className="text-base text-foreground/60 leading-relaxed">

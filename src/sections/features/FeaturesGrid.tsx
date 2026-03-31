@@ -38,7 +38,7 @@ export default function FeaturesGrid({
                 <IconWrapper icon={feature.icon} className="mb-4" />
               )}
 
-              <h3 className="text-xl font-heading text-foreground mb-3">
+              <h3 className="text-xl font-heading text-foreground mb-2">
                 {feature.title}
               </h3>
 

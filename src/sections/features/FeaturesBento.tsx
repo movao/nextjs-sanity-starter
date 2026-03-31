@@ -52,7 +52,7 @@ export default function FeaturesBento({
                 )}
 
                 <h3 className={cn(
-                  'font-heading text-foreground mb-3',
+                  'font-heading text-foreground mb-2',
                   i === 0 ? 'text-2xl md:text-3xl' : 'text-xl',
                 )}>
                   {feature.title}

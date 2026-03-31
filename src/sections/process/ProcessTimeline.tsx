@@ -52,7 +52,7 @@ export default function ProcessTimeline({
                     <div className="p-8 rounded-2xl bg-card border border-border
                                     hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5
                                     transition-all duration-300">
-                      <h3 className="text-lg font-semibold font-heading text-foreground mb-3">
+                      <h3 className="text-xl font-semibold font-heading text-foreground mb-2">
                         {step.title}
                       </h3>
                       <p className="text-base text-foreground/60 leading-relaxed">

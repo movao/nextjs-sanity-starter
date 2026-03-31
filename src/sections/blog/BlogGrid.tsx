@@ -63,7 +63,7 @@ export default function BlogGrid({
               />
 
               <div className="p-6">
-                <div className="flex items-center gap-3 text-sm text-foreground/50 mb-3">
+                <div className="flex items-center gap-3 text-sm text-foreground/50 mb-2">
                   <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
                   {post.author && (
                     <>

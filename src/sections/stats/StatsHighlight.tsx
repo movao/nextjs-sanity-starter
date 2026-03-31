@@ -32,7 +32,7 @@ export default function StatsHighlight({
             data-animate="fade-up"
             data-delay="100"
           >
-            <div className="text-6xl md:text-7xl font-heading text-primary mb-3">
+            <div className="text-6xl md:text-7xl font-heading text-primary mb-2">
               {featured.prefix && <span>{featured.prefix}</span>}
               {featured.value}
               {featured.suffix && <span>{featured.suffix}</span>}

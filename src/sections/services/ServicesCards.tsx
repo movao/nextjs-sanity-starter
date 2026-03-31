@@ -39,7 +39,7 @@ export default function ServicesCards({
                 <IconWrapper icon={service.icon} className="mb-4" />
               )}
 
-              <h3 className="text-xl font-heading text-foreground mb-3">
+              <h3 className="text-xl font-heading text-foreground mb-2">
                 {service.title}
               </h3>
 
