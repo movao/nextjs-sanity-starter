@@ -7,6 +7,11 @@ import Footer from '../components/Footer';
 import CookieBanner from '../components/CookieBanner';
 import ScrollReveal from '../components/ScrollReveal';
 import './globals.css';
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 // Theme CSS aus dem aktiven Design-Profil generieren
 const themeCSS = generateThemeCSS(design);
@@ -41,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={siteConfig.language}>
+    <html lang={siteConfig.language} className={cn("font-sans", geist.variable)}>
       <head>
         {/* Design-Profil: CSS Custom Properties */}
         <style dangerouslySetInnerHTML={{ __html: themeCSS }} />
