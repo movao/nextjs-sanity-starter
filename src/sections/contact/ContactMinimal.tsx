@@ -30,24 +30,24 @@ export default function ContactMinimal({
 
             <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="contact-min-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
+                <label htmlFor="contact-min-name" className="block text-base font-medium text-foreground/80 mb-2">Name *</label>
                 <Input type="text" id="contact-min-name" name="name" required
-                       className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
+                       className="w-full px-4 py-3.5 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
                        placeholder="Ihr Name" />
               </div>
 
               <div>
-                <label htmlFor="contact-min-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
+                <label htmlFor="contact-min-email" className="block text-base font-medium text-foreground/80 mb-2">E-Mail *</label>
                 <Input type="email" id="contact-min-email" name="email" required
-                       className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
+                       className="w-full px-4 py-3.5 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
                        placeholder="ihre@email.de" />
               </div>
             </div>
 
             <div>
-              <label htmlFor="contact-min-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
+              <label htmlFor="contact-min-message" className="block text-base font-medium text-foreground/80 mb-2">Nachricht *</label>
               <Textarea id="contact-min-message" name="message" rows={5} required
-                        className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
+                        className="w-full px-4 py-3.5 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
                         placeholder="Wie können wir Ihnen helfen?" />
             </div>
 

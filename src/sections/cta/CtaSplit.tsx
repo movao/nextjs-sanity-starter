@@ -38,7 +38,7 @@ export default function CtaSplit({
             {secondaryCtaText && secondaryCtaHref && (
               <a
                 href={secondaryCtaHref}
-                className="inline-block mt-4 text-sm text-primary hover:text-primary/80 transition-colors underline underline-offset-4"
+                className="inline-block mt-4 text-base text-primary hover:text-primary/80 transition-colors underline underline-offset-4"
               >
                 {secondaryCtaText}
               </a>
@@ -56,7 +56,7 @@ export default function CtaSplit({
                   id="cta-email"
                   type="email"
                   placeholder="Ihre E-Mail-Adresse"
-                  className="w-full px-4 py-3 rounded-xl bg-muted border border-border text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
+                  className="w-full px-4 py-3.5 rounded-xl bg-muted border border-border text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
                 />
                 <LinkButton href={ctaHref} className="w-full py-3 px-6 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
               </form>

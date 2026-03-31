@@ -87,7 +87,7 @@ export default function BlogGrid({
 
                 <a
                   href={`/blog/${post.slug.current}`}
-                  className="inline-flex items-center mt-4 text-sm font-medium text-primary hover:text-primary/80"
+                  className="inline-flex items-center mt-4 text-base font-medium text-primary hover:text-primary/80"
                 >
                   Weiterlesen
                   <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

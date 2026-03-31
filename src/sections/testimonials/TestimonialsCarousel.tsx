@@ -90,7 +90,7 @@ export default function TestimonialsCarousel({
                   <cite className="not-italic">
                     <span className="font-medium text-foreground">{item.name}</span>
                     {item.role && (
-                      <span className="block text-sm text-foreground/50 mt-0.5">{item.role}</span>
+                      <span className="block text-base text-foreground/50 mt-0.5">{item.role}</span>
                     )}
                   </cite>
                 </footer>

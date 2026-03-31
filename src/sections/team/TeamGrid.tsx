@@ -50,7 +50,7 @@ export default function TeamGrid({
                 {member.name}
               </h3>
 
-              <p className="text-primary font-medium text-sm mt-1">
+              <p className="text-primary font-medium text-base mt-1">
                 {member.role}
               </p>
 

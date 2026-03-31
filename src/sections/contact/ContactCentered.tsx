@@ -29,30 +29,30 @@ export default function ContactCentered({
             </div>
 
             <div>
-              <label htmlFor="contact-centered-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
+              <label htmlFor="contact-centered-name" className="block text-base font-medium text-foreground/80 mb-2">Name *</label>
               <Input type="text" id="contact-centered-name" name="name" required
-                     className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                     className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                      placeholder="Ihr Name" />
             </div>
 
             <div>
-              <label htmlFor="contact-centered-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
+              <label htmlFor="contact-centered-email" className="block text-base font-medium text-foreground/80 mb-2">E-Mail *</label>
               <Input type="email" id="contact-centered-email" name="email" required
-                     className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                     className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                      placeholder="ihre@email.de" />
             </div>
 
             <div>
-              <label htmlFor="contact-centered-phone" className="block text-sm font-medium text-foreground/80 mb-2">Telefon</label>
+              <label htmlFor="contact-centered-phone" className="block text-base font-medium text-foreground/80 mb-2">Telefon</label>
               <Input type="tel" id="contact-centered-phone" name="phone"
-                     className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                     className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                      placeholder="+49 123 456 789" />
             </div>
 
             <div>
-              <label htmlFor="contact-centered-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
+              <label htmlFor="contact-centered-message" className="block text-base font-medium text-foreground/80 mb-2">Nachricht *</label>
               <Textarea id="contact-centered-message" name="message" rows={5} required
-                        className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
+                        className="w-full px-4 py-3.5 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
                         placeholder="Wie können wir Ihnen helfen?" />
             </div>
 

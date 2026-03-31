@@ -30,23 +30,23 @@ export default function ContactSimple({
 
             <div className="flex flex-col lg:flex-row gap-4 items-end">
               <div className="flex-1 w-full">
-                <label htmlFor="contact-simple-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
+                <label htmlFor="contact-simple-name" className="block text-base font-medium text-foreground/80 mb-2">Name *</label>
                 <Input type="text" id="contact-simple-name" name="name" required
-                       className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                       className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                        placeholder="Ihr Name" />
               </div>
 
               <div className="flex-1 w-full">
-                <label htmlFor="contact-simple-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
+                <label htmlFor="contact-simple-email" className="block text-base font-medium text-foreground/80 mb-2">E-Mail *</label>
                 <Input type="email" id="contact-simple-email" name="email" required
-                       className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                       className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                        placeholder="ihre@email.de" />
               </div>
 
               <div className="flex-[2] w-full">
-                <label htmlFor="contact-simple-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
+                <label htmlFor="contact-simple-message" className="block text-base font-medium text-foreground/80 mb-2">Nachricht *</label>
                 <Textarea id="contact-simple-message" name="message" rows={1} required
-                          className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-none"
+                          className="w-full px-4 py-3.5 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-none"
                           placeholder="Ihre Nachricht..." />
               </div>
 

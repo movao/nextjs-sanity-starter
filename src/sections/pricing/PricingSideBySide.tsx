@@ -101,7 +101,7 @@ export default function PricingSideBySide({
                     <div className="text-right">
                       <span className="text-2xl font-heading text-primary">{pkg.price}</span>
                       {pkg.period && (
-                        <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
+                        <span className="text-foreground/60 text-base ml-1">/ {pkg.period}</span>
                       )}
                     </div>
                   </div>
@@ -112,7 +112,7 @@ export default function PricingSideBySide({
                     {pkg.features.map((feature, fi) => (
                       <li
                         key={fi}
-                        className="flex items-center gap-1.5 text-sm text-foreground/60 bg-muted px-3 py-1 rounded-full"
+                        className="flex items-center gap-1.5 text-base text-foreground/60 bg-muted px-3 py-1 rounded-full"
                       >
                         <svg
                           className="w-3.5 h-3.5 text-primary shrink-0"

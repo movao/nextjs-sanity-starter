@@ -54,7 +54,7 @@ export default function PricingTable({
                     <div className="mt-1">
                       <span className="text-xl font-heading">{pkg.price}</span>
                       {pkg.period && (
-                        <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
+                        <span className="text-foreground/60 text-base ml-1">/ {pkg.period}</span>
                       )}
                     </div>
                   </th>
@@ -141,7 +141,7 @@ export default function PricingTable({
                 <div>
                   <span className="text-xl font-heading text-primary">{pkg.price}</span>
                   {pkg.period && (
-                    <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
+                    <span className="text-foreground/60 text-base ml-1">/ {pkg.period}</span>
                   )}
                 </div>
               </CardHeader>

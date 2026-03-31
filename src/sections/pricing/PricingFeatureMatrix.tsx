@@ -65,7 +65,7 @@ export default function PricingFeatureMatrix({
                   <div className="mt-2">
                     <span className="text-3xl font-heading text-primary">{pkg.price}</span>
                     {pkg.period && (
-                      <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
+                      <span className="text-foreground/60 text-base ml-1">/ {pkg.period}</span>
                     )}
                   </div>
                 </div>
@@ -81,7 +81,7 @@ export default function PricingFeatureMatrix({
                   gridTemplateColumns: `200px repeat(${packages.length}, 1fr)`,
                 }}
               >
-                <div className="p-4 text-sm text-foreground/70 border-r border-border">
+                <div className="p-4 text-base text-foreground/70 border-r border-border">
                   {feature}
                 </div>
                 {packages.map((pkg, pi) => (
@@ -159,12 +159,12 @@ export default function PricingFeatureMatrix({
               <div className="mb-4">
                 <span className="text-3xl font-heading text-primary">{pkg.price}</span>
                 {pkg.period && (
-                  <span className="text-foreground/60 text-sm ml-1">/ {pkg.period}</span>
+                  <span className="text-foreground/60 text-base ml-1">/ {pkg.period}</span>
                 )}
               </div>
               <ul className="space-y-2 mb-6">
                 {allFeatures.map((feature, fi) => (
-                  <li key={fi} className="flex items-center gap-2 text-sm">
+                  <li key={fi} className="flex items-center gap-2 text-base">
                     {pkg.features.includes(feature) ? (
                       <svg
                         className="w-4 h-4 text-primary shrink-0"

@@ -64,7 +64,7 @@ export default function CtaWithTestimonial({
 
             {quoteName && (
               <div className="mt-4 pt-4 border-t border-border">
-                <span className="text-sm font-medium text-foreground">{quoteName}</span>
+                <span className="text-base font-medium text-foreground">{quoteName}</span>
               </div>
             )}
           </div>

@@ -33,31 +33,31 @@ export default function ContactCard({
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="contact-card-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
+                    <label htmlFor="contact-card-name" className="block text-base font-medium text-foreground/80 mb-2">Name *</label>
                     <Input type="text" id="contact-card-name" name="name" required
-                           className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                           className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                            placeholder="Ihr Name" />
                   </div>
 
                   <div>
-                    <label htmlFor="contact-card-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
+                    <label htmlFor="contact-card-email" className="block text-base font-medium text-foreground/80 mb-2">E-Mail *</label>
                     <Input type="email" id="contact-card-email" name="email" required
-                           className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                           className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                            placeholder="ihre@email.de" />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="contact-card-phone" className="block text-sm font-medium text-foreground/80 mb-2">Telefon</label>
+                  <label htmlFor="contact-card-phone" className="block text-base font-medium text-foreground/80 mb-2">Telefon</label>
                   <Input type="tel" id="contact-card-phone" name="phone"
-                         className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
+                         className="w-full px-4 py-3.5 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                          placeholder="+49 123 456 789" />
                 </div>
 
                 <div>
-                  <label htmlFor="contact-card-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
+                  <label htmlFor="contact-card-message" className="block text-base font-medium text-foreground/80 mb-2">Nachricht *</label>
                   <Textarea id="contact-card-message" name="message" rows={5} required
-                            className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
+                            className="w-full px-4 py-3.5 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
                             placeholder="Wie können wir Ihnen helfen?" />
                 </div>
 

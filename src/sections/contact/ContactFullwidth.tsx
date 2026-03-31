@@ -30,31 +30,31 @@ export default function ContactFullwidth({
 
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
-                <label htmlFor="contact-full-name" className="block text-sm font-medium text-primary-foreground/80 mb-2">Name *</label>
+                <label htmlFor="contact-full-name" className="block text-base font-medium text-primary-foreground/80 mb-2">Name *</label>
                 <Input type="text" id="contact-full-name" name="name" required
-                       className="w-full px-4 py-3 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40"
+                       className="w-full px-4 py-3.5 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40"
                        placeholder="Ihr Name" />
               </div>
 
               <div>
-                <label htmlFor="contact-full-email" className="block text-sm font-medium text-primary-foreground/80 mb-2">E-Mail *</label>
+                <label htmlFor="contact-full-email" className="block text-base font-medium text-primary-foreground/80 mb-2">E-Mail *</label>
                 <Input type="email" id="contact-full-email" name="email" required
-                       className="w-full px-4 py-3 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40"
+                       className="w-full px-4 py-3.5 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40"
                        placeholder="ihre@email.de" />
               </div>
             </div>
 
             <div>
-              <label htmlFor="contact-full-phone" className="block text-sm font-medium text-primary-foreground/80 mb-2">Telefon</label>
+              <label htmlFor="contact-full-phone" className="block text-base font-medium text-primary-foreground/80 mb-2">Telefon</label>
               <Input type="tel" id="contact-full-phone" name="phone"
-                     className="w-full px-4 py-3 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40"
+                     className="w-full px-4 py-3.5 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40"
                      placeholder="+49 123 456 789" />
             </div>
 
             <div>
-              <label htmlFor="contact-full-message" className="block text-sm font-medium text-primary-foreground/80 mb-2">Nachricht *</label>
+              <label htmlFor="contact-full-message" className="block text-base font-medium text-primary-foreground/80 mb-2">Nachricht *</label>
               <Textarea id="contact-full-message" name="message" rows={5} required
-                        className="w-full px-4 py-3 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40 resize-y"
+                        className="w-full px-4 py-3.5 rounded-lg border border-background/30 bg-background/10 focus:border-background/60 focus:ring-2 focus:ring-background/20 outline-none transition-all text-primary-foreground placeholder:text-primary-foreground/40 resize-y"
                         placeholder="Wie können wir Ihnen helfen?" />
             </div>
 
