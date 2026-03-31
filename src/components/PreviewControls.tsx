@@ -51,9 +51,13 @@ function applyRadius(key: RadiusKey) {
 }
 
 function applyIconStyle(key: IconStyleKey) {
-  // Icon style is read from design.iconStyle at render time.
-  // For live preview we set a data attribute that IconWrapper can read.
   document.documentElement.setAttribute('data-icon-style', key);
+  // Show/hide the correct icon variant in all IconWrapper instances
+  document.querySelectorAll('[data-icon]').forEach((el) => {
+    const variant = (el as HTMLElement).dataset.icon;
+    (el as HTMLElement).classList.toggle('hidden', variant !== key);
+    if (variant === key) (el as HTMLElement).classList.remove('hidden');
+  });
 }
 
 const colorKeys = Object.keys(colorWorlds) as ColorWorldKey[];
