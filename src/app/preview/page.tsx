@@ -6,6 +6,7 @@
 import type { Metadata } from 'next';
 import { design } from '@/config/design';
 import IconOrEmoji from '@/components/ui/IconOrEmoji';
+import PreviewControls from '@/components/PreviewControls';
 
 // -- Hero --
 import HeroImmersive from '@/sections/hero/HeroImmersive';
@@ -538,6 +539,8 @@ export default function PreviewPage() {
         <SectionLabel name="MapEmbed" />
         <MapEmbed heading="So finden Sie uns" subheading="Zentral gelegen und gut erreichbar" lat={51.2277} lng={6.7735} zoom={15} />
       </div>
+
+      <PreviewControls />
     </>
   );
 }

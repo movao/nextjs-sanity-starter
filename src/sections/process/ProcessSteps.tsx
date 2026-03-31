@@ -20,7 +20,7 @@ export default function ProcessSteps({
   return (
     <section id="process-steps" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-16" data-animate="fade-up">
+        <div className="text-center mb-10" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -56,7 +56,7 @@ export default function ProcessSteps({
                 <h3 className="text-lg font-semibold font-heading text-foreground mb-3">
                   {step.title}
                 </h3>
-                <p className="text-sm text-foreground/60 leading-relaxed">
+                <p className="text-base text-foreground/60 leading-relaxed">
                   {step.description}
                 </p>
               </div>

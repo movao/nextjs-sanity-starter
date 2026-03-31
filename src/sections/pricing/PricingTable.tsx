@@ -26,7 +26,7 @@ export default function PricingTable({
   return (
     <section id="pricing-table" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-16" data-animate="fade-up">
+        <div className="text-center mb-10" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -142,7 +142,7 @@ export default function PricingTable({
 
               <ul className="space-y-2 mb-6">
                 {allFeatures.map((feature, fi) => (
-                  <li key={fi} className="flex items-center gap-2 text-sm">
+                  <li key={fi} className="flex items-center gap-2 text-base">
                     {pkg.features.includes(feature) ? (
                       <svg
                         className="w-4 h-4 text-primary shrink-0"

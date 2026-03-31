@@ -130,9 +130,9 @@
     @apply mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Section Titel */
+  /* Section Titel — Heading + Subheading nah beieinander (1.5 Ratio) */
   .section-heading {
-    @apply text-title mb-4;
+    @apply text-title mb-1.5;
     font-family: var(--font-heading);
     color: var(--color-foreground);
   }
@@ -141,6 +141,14 @@
     @apply text-subtitle max-w-2xl;
     color: color-mix(in srgb, var(--color-foreground) 60%, transparent);
   }
+
+  /*
+   * Designregel: Minimum-Schriftgrößen
+   * - Fließtext in Cards/Sections: min 16px (text-base)
+   * - Card-Titel: min 18px (text-lg)
+   * - Nur Labels, Badges, Timestamps dürfen text-sm (14px) sein
+   * - text-xs (12px) nur für technische Metadaten, NIE für Lesetexte
+   */
 }
 
 /* ─── Animations ───────────────────────────────────────── */

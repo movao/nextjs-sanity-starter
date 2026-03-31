@@ -18,7 +18,7 @@ export default function FaqAccordion({
   return (
     <section id="faq" className="section-alt">
       <div className="container-narrow">
-        <div className="text-center mb-16" data-animate="fade-up">
+        <div className="text-center mb-10" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>

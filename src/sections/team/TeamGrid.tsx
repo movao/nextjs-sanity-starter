@@ -22,7 +22,7 @@ export default function TeamGrid({
   return (
     <section id="team" className="section-alt">
       <div className="container-narrow">
-        <div className="text-center mb-16" data-animate="fade-up">
+        <div className="text-center mb-10" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -55,7 +55,7 @@ export default function TeamGrid({
               </p>
 
               {member.bio && (
-                <p className="text-foreground/60 mt-3 text-sm leading-relaxed max-w-xs mx-auto">
+                <p className="text-foreground/60 mt-3 text-base leading-relaxed max-w-xs mx-auto">
                   {member.bio}
                 </p>
               )}

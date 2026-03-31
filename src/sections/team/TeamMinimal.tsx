@@ -21,7 +21,7 @@ export default function TeamMinimal({
   return (
     <section id="team" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-16" data-animate="fade-up">
+        <div className="text-center mb-10" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -45,11 +45,11 @@ export default function TeamMinimal({
                 />
               </div>
 
-              <h3 className="text-sm font-heading font-medium text-foreground leading-tight">
+              <h3 className="text-base font-heading font-medium text-foreground leading-tight">
                 {member.name}
               </h3>
 
-              <p className="text-xs text-foreground/50 mt-0.5">
+              <p className="text-sm text-foreground/50 mt-0.5">
                 {member.role}
               </p>
             </div>
