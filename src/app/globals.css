@@ -9,10 +9,16 @@
 
    Typoskala:  1.333 Ratio (Perfect Fourth), Basis 16px
    Raster:     8px-Grid (alle Abstände sind Vielfache von 8)
-   Zeilenhöhe: Immer auf 8px-Raster (24, 32, 40, 48, 56px)
+   Zeilenhöhe: Immer auf 8px-Raster (24, 32, 40, 48, 56, 64px)
    Spacing:    Heading→Subheading: 8px, Block→Content: 32px
 
-   Stufen: base(16) → lg(21) → xl(28) → title(38) → display(50)
+   4 universelle Regeln (aus Analyse von 6 Top-Websites):
+   1. Body-Text NIE unter 16px
+   2. Buttons/Inputs mindestens 48px Höhe
+   3. Section-Padding mindestens 64px
+   4. Headlines mindestens 2.5× Body (40px+)
+
+   Stufen: base(16) → lg(21) → xl(28) → title(40) → display(56) → hero(64)
    Jede Stufe = Vorgänger × 1.333
    ═══════════════════════════════════════════════════════════ */
 
@@ -50,15 +56,18 @@
      Fluid: Min-Wert für Mobile, Max für Desktop.
 
      base:    16px  → Zeilenhöhe 24px (1.5)
-     lg:      21px  → Zeilenhöhe 32px (1.524)
-     xl:      28px  → Zeilenhöhe 40px (1.429)
-     title:   38px  → Zeilenhöhe 48px (1.263)
-     display: 50px  → Zeilenhöhe 56px (1.12)
+     lg:      21px  → Zeilenhöhe 32px
+     xl:      28px  → Zeilenhöhe 40px
+     title:   40px  → Zeilenhöhe 48px (Regel: mind. 2.5× Body)
+     display: 56px  → Zeilenhöhe 64px
+     hero:    64px  → Zeilenhöhe 72px (für Hero-Headlines)
      ─────────────────────────────────────────────────────── */
-  --text-display: clamp(2rem, 4vw, 3.157rem);
-  --text-display--line-height: calc(56 / 50);
-  --text-title: clamp(1.5rem, 3vw, 2.369rem);
-  --text-title--line-height: calc(48 / 38);
+  --text-hero: clamp(2.5rem, 5vw, 4rem);
+  --text-hero--line-height: calc(72 / 64);
+  --text-display: clamp(2rem, 4vw, 3.5rem);
+  --text-display--line-height: calc(64 / 56);
+  --text-title: clamp(1.5rem, 3vw, 2.5rem);
+  --text-title--line-height: calc(48 / 40);
   --text-subtitle: clamp(1.125rem, 1.5vw, 1.333rem);
   --text-subtitle--line-height: calc(32 / 21);
   --text-body-lg: clamp(1rem, 1.1vw, 1.125rem);
@@ -107,12 +116,15 @@
 /* ─── Component Layer ──────────────────────────────────── */
 
 @layer components {
-  /* Buttons — Padding auf 8px-Raster: px-6(24px) py-3(12px→nicht ideal, aber nah genug) */
+  /* Buttons — Regel: mindestens 48px Höhe (aus Website-Analyse) */
   .btn-primary {
     @apply inline-flex items-center justify-center
-           px-8 py-3 font-medium text-base
+           px-8 font-medium text-base
            transition-all duration-200
            focus:outline-none focus:ring-2 focus:ring-offset-2;
+    min-height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     background-color: var(--color-primary);
     color: var(--color-background);
     border-radius: var(--radius);
@@ -125,9 +137,12 @@
 
   .btn-secondary {
     @apply inline-flex items-center justify-center
-           px-8 py-3 font-medium text-base
+           px-8 font-medium text-base
            transition-all duration-200
            focus:outline-none focus:ring-2 focus:ring-offset-2;
+    min-height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border: 2px solid var(--color-primary);
     color: var(--color-primary);
     border-radius: var(--radius);

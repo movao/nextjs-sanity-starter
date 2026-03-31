@@ -410,7 +410,7 @@ export const spacingPresets = {
   dense: {
     id: 'dense',
     label: 'Dense (Kompakt)',
-    sectionPadding: '3.5rem',     // 56px
+    sectionPadding: '4rem',       // 64px (Regel: mind. 64px)
     elementGap: '1.5rem',         // 24px
     borderRadius: '0.25rem',      // 4px
     containerMaxWidth: '1400px',
