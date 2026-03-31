@@ -17,7 +17,7 @@ export default function ContactSplit({
   return (
     <section id="contact" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-10" data-animate="fade-up">
+        <div className="text-center mb-8" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -96,28 +96,28 @@ export default function ContactSplit({
               </div>
 
               <div>
-                <label htmlFor="contact-split-name" className="block text-sm font-medium text-foreground/80 mb-1.5">Name *</label>
+                <label htmlFor="contact-split-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
                 <input type="text" id="contact-split-name" name="name" required
                        className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                        placeholder="Ihr Name" />
               </div>
 
               <div>
-                <label htmlFor="contact-split-email" className="block text-sm font-medium text-foreground/80 mb-1.5">E-Mail *</label>
+                <label htmlFor="contact-split-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
                 <input type="email" id="contact-split-email" name="email" required
                        className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                        placeholder="ihre@email.de" />
               </div>
 
               <div>
-                <label htmlFor="contact-split-phone" className="block text-sm font-medium text-foreground/80 mb-1.5">Telefon</label>
+                <label htmlFor="contact-split-phone" className="block text-sm font-medium text-foreground/80 mb-2">Telefon</label>
                 <input type="tel" id="contact-split-phone" name="phone"
                        className="w-full px-4 py-3 rounded-lg border border-border bg-input focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground"
                        placeholder="+49 123 456 789" />
               </div>
 
               <div>
-                <label htmlFor="contact-split-message" className="block text-sm font-medium text-foreground/80 mb-1.5">Nachricht *</label>
+                <label htmlFor="contact-split-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
                 <textarea id="contact-split-message" name="message" rows={5} required
                           className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
                           placeholder="Wie können wir Ihnen helfen?" />

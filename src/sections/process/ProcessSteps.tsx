@@ -20,7 +20,7 @@ export default function ProcessSteps({
   return (
     <section id="process-steps" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-10" data-animate="fade-up">
+        <div className="text-center mb-8" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -40,7 +40,7 @@ export default function ProcessSteps({
 
               {/* Numbered circle */}
               <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full
-                              bg-primary text-background font-heading text-lg font-bold mb-5
+                              bg-primary text-background font-heading text-lg font-bold mb-4
                               group-hover:scale-110 transition-transform duration-300">
                 {step.icon ? (
                   <IconOrEmoji icon={step.icon} size={20} weight="regular" />

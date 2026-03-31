@@ -21,7 +21,7 @@ export default function ServicesCards({
   return (
     <section id="services" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-10" data-animate="fade-up">
+        <div className="text-center mb-8" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>
@@ -36,7 +36,7 @@ export default function ServicesCards({
                          transition-all duration-300"
             >
               {service.icon && (
-                <IconWrapper icon={service.icon} className="mb-5" />
+                <IconWrapper icon={service.icon} className="mb-4" />
               )}
 
               <h3 className="text-xl font-heading text-foreground mb-3">

@@ -21,7 +21,7 @@ export default function StatsHighlight({
   return (
     <section id="stats-highlight" className="section bg-background">
       <div className="container-narrow">
-        <div className="text-center mb-10" data-animate="fade-up">
+        <div className="text-center mb-8" data-animate="fade-up">
           <h2 className="section-heading">{heading}</h2>
           <p className="section-subheading mx-auto">{subheading}</p>
         </div>

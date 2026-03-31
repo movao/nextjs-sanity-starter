@@ -24,16 +24,16 @@ export default function ContactMinimal({
               <input type="text" id="contact-min-gotcha" name="_gotcha" tabIndex={-1} autoComplete="off" />
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="contact-min-name" className="block text-sm font-medium text-foreground/80 mb-1.5">Name *</label>
+                <label htmlFor="contact-min-name" className="block text-sm font-medium text-foreground/80 mb-2">Name *</label>
                 <input type="text" id="contact-min-name" name="name" required
                        className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
                        placeholder="Ihr Name" />
               </div>
 
               <div>
-                <label htmlFor="contact-min-email" className="block text-sm font-medium text-foreground/80 mb-1.5">E-Mail *</label>
+                <label htmlFor="contact-min-email" className="block text-sm font-medium text-foreground/80 mb-2">E-Mail *</label>
                 <input type="email" id="contact-min-email" name="email" required
                        className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 bg-input outline-none transition-all text-foreground"
                        placeholder="ihre@email.de" />
@@ -41,7 +41,7 @@ export default function ContactMinimal({
             </div>
 
             <div>
-              <label htmlFor="contact-min-message" className="block text-sm font-medium text-foreground/80 mb-1.5">Nachricht *</label>
+              <label htmlFor="contact-min-message" className="block text-sm font-medium text-foreground/80 mb-2">Nachricht *</label>
               <textarea id="contact-min-message" name="message" rows={5} required
                         className="w-full px-4 py-3 rounded-lg border border-border focus:border-ring focus:ring-2 focus:ring-ring/20 outline-none transition-all text-foreground resize-y"
                         placeholder="Wie können wir Ihnen helfen?" />

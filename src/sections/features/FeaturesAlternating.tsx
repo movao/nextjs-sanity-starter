@@ -42,7 +42,7 @@ export default function FeaturesAlternating({
                 {/* Text */}
                 <div className={cn(isReversed && 'lg:order-2')}>
                   {feature.icon && (
-                    <IconWrapper icon={feature.icon} className="mb-5" />
+                    <IconWrapper icon={feature.icon} className="mb-4" />
                   )}
 
                   <h3 className="text-2xl md:text-3xl font-heading text-foreground mb-4">

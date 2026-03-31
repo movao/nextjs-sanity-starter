@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
-/* ─── Tailwind v4: Design Token Mapping ──────────────────
-   Maps CSS custom properties from apply-theme.ts to
-   Tailwind utility classes (bg-primary, text-foreground, etc.)
-   ──────────────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════
+   DESIGN SYSTEM — Mathematische Grundlagen
 
-/*
-  Tailwind v4 Farb-Integration:
-  apply-theme.ts setzt --color-primary etc. auf :root via <style> im Layout.
-  @theme registriert die Farb-Tokens damit bg-primary, text-foreground etc.
-  als Tailwind-Utilities existieren. Die Werte hier sind Fallbacks —
-  apply-theme.ts überschreibt sie zur Laufzeit.
-*/
+   Typoskala:  1.333 Ratio (Perfect Fourth), Basis 16px
+   Raster:     8px-Grid (alle Abstände sind Vielfache von 8)
+   Zeilenhöhe: Immer auf 8px-Raster (24, 32, 40, 48, 56px)
+   Spacing:    Heading→Subheading: 8px, Block→Content: 32px
+
+   Stufen: base(16) → lg(21) → xl(28) → title(38) → display(50)
+   Jede Stufe = Vorgänger × 1.333
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Tailwind v4: Theme-Tokens ────────────────────────── */
+
 @theme {
+  /* Farben — Fallbacks, apply-theme.ts überschreibt zur Laufzeit */
   --color-background: #ffffff;
   --color-foreground: #09090b;
   --color-primary: #2563eb;
@@ -25,10 +28,11 @@
   --color-destructive: #ef4444;
   --color-success: #22c55e;
 
+  /* Fonts — Fallbacks */
   --font-heading: 'Clash Display', sans-serif;
   --font-body: 'Satoshi', sans-serif;
 
-  /* Border radius scale from --radius token */
+  /* Border-Radius — skaliert von --radius (gesetzt durch apply-theme.ts) */
   --radius-DEFAULT: var(--radius);
   --radius-sm: calc(var(--radius) * 0.5);
   --radius-md: calc(var(--radius) * 0.75);
@@ -36,17 +40,27 @@
   --radius-xl: calc(var(--radius) * 1.5);
   --radius-2xl: calc(var(--radius) * 2);
 
-  /* Typoskala — 1.25er Ratio (Minor Third), Basis 1rem (16px) */
-  --text-display: clamp(2rem, 4vw, 3.052rem);
-  --text-display--line-height: 1.1;
-  --text-title: clamp(1.563rem, 2.5vw, 1.953rem);
-  --text-title--line-height: 1.2;
-  --text-subtitle: clamp(1.125rem, 1.5vw, 1.25rem);
-  --text-subtitle--line-height: 1.5;
-  --text-body-lg: clamp(1rem, 1.1vw, 1.125rem);
-  --text-body-lg--line-height: 1.6;
+  /* ─── Typoskala: 1.333 Ratio (Perfect Fourth) ──────────
+     Basis: 1rem (16px). Jede Stufe × 1.333.
+     Zeilenhöhen auf 8px-Raster gerundet.
+     Fluid: Min-Wert für Mobile, Max für Desktop.
 
-  /* Gap & max-width tokens */
+     base:    16px  → Zeilenhöhe 24px (1.5)
+     lg:      21px  → Zeilenhöhe 32px (1.524)
+     xl:      28px  → Zeilenhöhe 40px (1.429)
+     title:   38px  → Zeilenhöhe 48px (1.263)
+     display: 50px  → Zeilenhöhe 56px (1.12)
+     ─────────────────────────────────────────────────────── */
+  --text-display: clamp(2rem, 4vw, 3.157rem);
+  --text-display--line-height: calc(56 / 50);
+  --text-title: clamp(1.5rem, 3vw, 2.369rem);
+  --text-title--line-height: calc(48 / 38);
+  --text-subtitle: clamp(1.125rem, 1.5vw, 1.333rem);
+  --text-subtitle--line-height: calc(32 / 21);
+  --text-body-lg: clamp(1rem, 1.1vw, 1.125rem);
+  --text-body-lg--line-height: 1.5;
+
+  /* Gap & Max-Width */
   --gap-section: var(--spacing-gap);
   --max-width-container: var(--container-max-width);
 }
@@ -56,12 +70,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 5rem; /* 80px — 10×8 */
   }
 
   body {
     font-family: var(--font-body);
     font-weight: var(--font-body-weight);
+    font-size: 1rem; /* 16px Basis */
+    line-height: 1.5; /* 24px = 3×8 */
     color: var(--color-foreground);
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
@@ -82,10 +98,10 @@
 /* ─── Component Layer ──────────────────────────────────── */
 
 @layer components {
-  /* Wiederverwendbare Button-Styles */
+  /* Buttons — Padding auf 8px-Raster: px-6(24px) py-3(12px→nicht ideal, aber nah genug) */
   .btn-primary {
     @apply inline-flex items-center justify-center
-           px-6 py-3 font-medium
+           px-8 py-3 font-medium text-base
            transition-all duration-200
            focus:outline-none focus:ring-2 focus:ring-offset-2;
     background-color: var(--color-primary);
@@ -100,7 +116,7 @@
 
   .btn-secondary {
     @apply inline-flex items-center justify-center
-           px-6 py-3 font-medium
+           px-8 py-3 font-medium text-base
            transition-all duration-200
            focus:outline-none focus:ring-2 focus:ring-offset-2;
     border: 2px solid var(--color-primary);
@@ -113,7 +129,7 @@
     background-color: var(--color-muted);
   }
 
-  /* Section-Wrapper */
+  /* Section-Wrapper — Padding aus Spacing-Preset (apply-theme.ts) */
   .section {
     padding-top: var(--spacing-section);
     padding-bottom: var(--spacing-section);
@@ -130,9 +146,15 @@
     @apply mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Section Titel — Heading + Subheading nah beieinander (1.5 Ratio) */
+  /* ─── Section-Titel ──────────────────────────────────────
+     Heading → Subheading: 8px (mb-2) — eng verbunden (Gestalt: Nähe)
+     Heading-Block → Content: 32px (mb-8) — klare Trennung
+
+     1.5×-Regel: Raum ÜBER der Heading ist automatisch größer
+     weil .section Padding hat. Heading→Content ist immer 32px.
+     ──────────────────────────────────────────────────────── */
   .section-heading {
-    @apply text-title mb-1.5;
+    @apply text-title mb-2; /* 8px zum Subheading */
     font-family: var(--font-heading);
     color: var(--color-foreground);
   }
@@ -142,18 +164,14 @@
     color: color-mix(in srgb, var(--color-foreground) 60%, transparent);
   }
 
-  /*
-   * Designregel: Minimum-Schriftgrößen
-   * - Fließtext in Cards/Sections: min 16px (text-base)
-   * - Card-Titel: min 18px (text-lg)
-   * - Nur Labels, Badges, Timestamps dürfen text-sm (14px) sein
-   * - text-xs (12px) nur für technische Metadaten, NIE für Lesetexte
-   */
+  /* Heading-Block Wrapper: immer 32px (4×8) zum Content */
+  .section-header {
+    @apply text-center mb-8; /* 32px */
+  }
 }
 
 /* ─── Animations ───────────────────────────────────────── */
 
-/* Smooth Fade-In Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -174,7 +192,7 @@
 .animate-delay-3 { animation-delay: 0.3s; }
 .animate-delay-4 { animation-delay: 0.4s; }
 
-/* ─── Scroll-Reveal Animationen (Intersection Observer) ── */
+/* ─── Scroll-Reveal (Intersection Observer) ────────────── */
 
 [data-animate] {
   opacity: 0;
@@ -182,7 +200,7 @@
 }
 
 [data-animate="fade-up"] {
-  transform: translateY(1.5rem);
+  transform: translateY(1.5rem); /* 24px = 3×8 */
 }
 
 [data-animate="fade-in"] {

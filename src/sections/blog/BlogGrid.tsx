@@ -36,7 +36,7 @@ export default function BlogGrid({
     <section id="blog" className="section bg-background">
       <div className="container-narrow">
         {(heading || subheading) && (
-          <div className="text-center mb-10" data-animate="fade-up">
+          <div className="text-center mb-8" data-animate="fade-up">
             {heading && <h2 className="section-heading">{heading}</h2>}
             {subheading && <p className="section-subheading mx-auto">{subheading}</p>}
           </div>
