@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   heading?: string;
@@ -32,19 +32,12 @@ export default function CtaFullwidth({
           )}
 
           <div className="mt-10">
-            <Button
-              render={<a href={ctaHref} />}
-              size="lg"
-              variant="outline"
-              className="inline-flex items-center justify-center px-10 py-4 text-lg font-medium
-                         bg-background text-foreground rounded-[var(--radius)]
-                         hover:bg-background/90 transition-colors shadow-lg"
-            >
+            <LinkButton href={ctaHref} size="lg" className="bg-background text-foreground hover:bg-background/90 shadow-lg text-lg px-10 py-4">
               {ctaText}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Button>
+            </LinkButton>
           </div>
         </div>
       </div>

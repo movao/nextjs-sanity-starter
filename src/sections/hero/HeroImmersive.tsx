@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config';
 import ImageSlot from '@/components/ui/ImageSlot';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   headline?: string;
@@ -46,15 +46,13 @@ export default function HeroImmersive({
           </p>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center animate-in animate-delay-2">
-            <Button render={<a href={ctaHref} />} size="lg" variant="default" className="btn-primary text-lg px-10 py-5">
-              {ctaText}
-            </Button>
-            <Button render={<a href="#services" />} size="lg" variant="outline" className="inline-flex items-center justify-center px-8 py-5 text-background/80 hover:text-background font-medium transition-colors border-transparent bg-transparent hover:bg-transparent">
+            <LinkButton href={ctaHref} size="lg" variant="default" className="btn-primary text-lg px-10 py-5">{ctaText}</LinkButton>
+            <LinkButton href="#services" variant="ghost" size="lg" className="text-background/80 hover:text-background">
               Mehr erfahren
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
               </svg>
-            </Button>
+            </LinkButton>
           </div>
         </div>
       </div>

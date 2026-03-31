@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   heading?: string;
@@ -23,12 +23,7 @@ export default function CtaMinimal({
           </h2>
 
           <div className="mt-8">
-            <Button
-             
-              className="px-10 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors"
-            >
-              <a href={ctaHref}>{ctaText}</a>
-            </Button>
+            <LinkButton href={ctaHref} className="px-10 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
           </div>
         </div>
       </div>

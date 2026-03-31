@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   heading?: string;
@@ -58,12 +58,7 @@ export default function CtaSplit({
                   placeholder="Ihre E-Mail-Adresse"
                   className="w-full px-4 py-3 rounded-xl bg-muted border border-border text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
                 />
-                <Button
-                 
-                  className="w-full py-3 px-6 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors"
-                >
-                  <a href={ctaHref}>{ctaText}</a>
-                </Button>
+                <LinkButton href={ctaHref} className="w-full py-3 px-6 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
               </form>
               <p className="mt-3 text-xs text-foreground/40 text-center">
                 Kein Spam. Jederzeit abbestellbar.

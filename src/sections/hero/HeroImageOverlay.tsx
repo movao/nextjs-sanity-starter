@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 import ImageSlot from '@/components/ui/ImageSlot';
 
 export interface Props {
@@ -54,12 +54,8 @@ export default function HeroImageOverlay({
           )}
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
-            <Button size="lg">
-              <a href={ctaHref}>{ctaText}</a>
-            </Button>
-            <Button variant="outline" size="lg" className="border-background text-background hover:bg-background hover:text-foreground">
-              <a href={secondaryCtaHref}>{secondaryCtaText}</a>
-            </Button>
+            <LinkButton href={ctaHref} size="lg">{ctaText}</LinkButton>
+            <LinkButton href={secondaryCtaHref} variant="outline" size="lg" className="border-background text-background hover:bg-background hover:text-foreground">{secondaryCtaText}</LinkButton>
           </div>
         </div>
       </div>

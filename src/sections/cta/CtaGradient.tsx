@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   heading?: string;
@@ -36,17 +36,12 @@ export default function CtaGradient({
           )}
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-             
-              className="px-10 py-4 text-lg font-medium bg-background text-foreground rounded-[var(--radius)] hover:bg-background/90 transition-colors shadow-lg"
-            >
-              <a href={ctaHref}>
-                {ctaText}
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </Button>
+            <LinkButton href={ctaHref} size="lg" className="bg-background text-foreground hover:bg-background/90 shadow-lg text-lg px-10 py-4">
+              {ctaText}
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </LinkButton>
 
             {secondaryCtaText && secondaryCtaHref && (
               <a

@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   heading?: string;
@@ -34,9 +34,7 @@ export default function CtaCompact({
           </div>
 
           <div className="flex-shrink-0">
-            <Button render={<a href={ctaHref} />} variant="default" className="btn-primary px-8 py-4 whitespace-nowrap">
-              {ctaText}
-            </Button>
+            <LinkButton href={ctaHref} variant="default" className="btn-primary px-8 py-4 whitespace-nowrap">{ctaText}</LinkButton>
           </div>
         </div>
       </div>

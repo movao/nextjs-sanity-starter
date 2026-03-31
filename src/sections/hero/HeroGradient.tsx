@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   headline?: string;
@@ -56,9 +56,7 @@ export default function HeroGradient({
           )}
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
-            <Button size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-primary">
-              <a href={ctaHref}>{ctaText}</a>
-            </Button>
+            <LinkButton href={ctaHref} size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-primary">{ctaText}</LinkButton>
             {secondaryCtaText && (
               <a
                 href={secondaryCtaHref}

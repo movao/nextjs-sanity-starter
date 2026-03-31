@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config';
 import ImageSlot from '@/components/ui/ImageSlot';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   headline?: string;
@@ -32,15 +32,13 @@ export default function HeroEditorial({
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
-              <Button render={<a href={ctaHref} />} size="lg" variant="default" className="btn-primary text-lg px-8 py-4">
-                {ctaText}
-              </Button>
-              <Button render={<a href="#services" />} size="lg" variant="outline" className="inline-flex items-center justify-center px-6 py-4 text-foreground/60 hover:text-primary font-medium transition-colors border-transparent bg-transparent hover:bg-transparent">
+              <LinkButton href={ctaHref} size="lg" variant="default" className="btn-primary text-lg px-8 py-4">{ctaText}</LinkButton>
+              <LinkButton href="#services" variant="ghost" size="lg" className="text-foreground/60 hover:text-primary">
                 Mehr erfahren
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                 </svg>
-              </Button>
+              </LinkButton>
             </div>
           </div>
 

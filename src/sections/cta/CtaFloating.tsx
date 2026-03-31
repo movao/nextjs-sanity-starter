@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   heading?: string;
@@ -37,21 +37,11 @@ export default function CtaFloating({
             )}
 
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-               
-                className="px-8 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors"
-              >
-                <a href={ctaHref}>{ctaText}</a>
-              </Button>
+              <LinkButton href={ctaHref} className="px-8 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
 
               {secondaryCtaText && secondaryCtaHref && (
-                <Button
-                 
-                  variant="outline"
-                  className="px-8 py-4 rounded-xl font-medium bg-muted text-foreground hover:bg-primary hover:text-background transition-colors"
-                >
-                  <a href={secondaryCtaHref}>{secondaryCtaText}</a>
-                </Button>
+                <LinkButton href={secondaryCtaHref} variant="outline"
+                  className="px-8 py-4 rounded-xl font-medium bg-muted text-foreground hover:bg-primary hover:text-background transition-colors">{secondaryCtaText}</LinkButton>
               )}
             </div>
           </CardContent>

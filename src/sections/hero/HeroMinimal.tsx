@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config';
-import { Button } from '@/components/ui/button';
+import { LinkButton } from '@/components/ui/link-button';
 
 export interface Props {
   headline?: string;
@@ -29,12 +29,7 @@ export default function HeroMinimal({
           )}
 
           <div className="mt-12 animate-in animate-delay-2">
-            <Button
-              render={<a href={ctaHref} />}
-              size="lg"
-              variant="outline"
-              className="group inline-flex items-center text-lg font-medium text-primary hover:text-primary/80 transition-colors border-transparent bg-transparent hover:bg-transparent"
-            >
+            <LinkButton href={ctaHref} variant="ghost" size="lg" className="group text-lg text-primary hover:text-primary/80">
               {ctaText}
               <svg
                 className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
@@ -42,7 +37,7 @@ export default function HeroMinimal({
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </Button>
+            </LinkButton>
           </div>
         </div>
       </div>
