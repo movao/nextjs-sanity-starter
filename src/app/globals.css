@@ -1,26 +1,211 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─── Tailwind v4: Design Token Mapping ──────────────────
+   Maps CSS custom properties from apply-theme.ts to
+   Tailwind utility classes (bg-primary, text-foreground, etc.)
+   ──────────────────────────────────────────────────────── */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors — mapped from CSS custom properties set by apply-theme.ts */
+  --color-background: rgb(var(--color-background-rgb) / <alpha-value>);
+  --color-foreground: rgb(var(--color-foreground-rgb) / <alpha-value>);
+  --color-primary: rgb(var(--color-primary-rgb) / <alpha-value>);
+  --color-accent: rgb(var(--color-accent-rgb) / <alpha-value>);
+  --color-muted: rgb(var(--color-muted-rgb) / <alpha-value>);
+  --color-card: rgb(var(--color-card-rgb) / <alpha-value>);
+  --color-border: rgb(var(--color-border-rgb) / <alpha-value>);
+  --color-input: rgb(var(--color-input-rgb) / <alpha-value>);
+  --color-ring: rgb(var(--color-ring-rgb) / <alpha-value>);
+  --color-destructive: rgb(var(--color-destructive-rgb) / <alpha-value>);
+  --color-success: rgb(var(--color-success-rgb) / <alpha-value>);
+
+  /* Font families */
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  /* Border radius scale from --radius token */
+  --radius-DEFAULT: var(--radius);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: calc(var(--radius) * 0.75);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.5);
+  --radius-2xl: calc(var(--radius) * 2);
+
+  /* Typoskala — 1.25er Ratio (Minor Third), Basis 1rem (16px) */
+  --text-display: clamp(2rem, 4vw, 3.052rem);
+  --text-display--line-height: 1.1;
+  --text-title: clamp(1.563rem, 2.5vw, 1.953rem);
+  --text-title--line-height: 1.2;
+  --text-subtitle: clamp(1.125rem, 1.5vw, 1.25rem);
+  --text-subtitle--line-height: 1.5;
+  --text-body-lg: clamp(1rem, 1.1vw, 1.125rem);
+  --text-body-lg--line-height: 1.6;
+
+  /* Gap & max-width tokens */
+  --gap-section: var(--spacing-gap);
+  --max-width-container: var(--container-max-width);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ─── Base Layer ────────────────────────────────────────── */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: var(--font-body-weight);
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: var(--font-heading-weight);
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-primary) 20%, transparent);
+    color: var(--color-foreground);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Component Layer ──────────────────────────────────── */
+
+@layer components {
+  /* Wiederverwendbare Button-Styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 font-medium
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-radius: var(--radius);
+    --tw-ring-color: var(--color-ring);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-accent);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           px-6 py-3 font-medium
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: var(--radius);
+    --tw-ring-color: var(--color-ring);
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-muted);
+  }
+
+  /* Section-Wrapper */
+  .section {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+  }
+
+  .section-alt {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+    background-color: var(--color-muted);
+  }
+
+  .container-narrow {
+    max-width: var(--container-max-width);
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Titel */
+  .section-heading {
+    @apply text-title mb-4;
+    font-family: var(--font-heading);
+    color: var(--color-foreground);
+  }
+
+  .section-subheading {
+    @apply text-subtitle max-w-2xl;
+    color: color-mix(in srgb, var(--color-foreground) 60%, transparent);
+  }
+}
+
+/* ─── Animations ───────────────────────────────────────── */
+
+/* Smooth Fade-In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+
+/* ─── Scroll-Reveal Animationen (Intersection Observer) ── */
+
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-animate="fade-up"] {
+  transform: translateY(1.5rem);
+}
+
+[data-animate="fade-in"] {
+  transform: none;
+}
+
+[data-animate="scale-in"] {
+  transform: scale(0.95);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ─── Barrierefreiheit ─────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
