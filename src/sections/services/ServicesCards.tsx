@@ -45,7 +45,7 @@ export default function ServicesCards({
                   {service.title}
                 </h3>
 
-                <p className="text-foreground/60 leading-relaxed">
+                <p className="text-base text-foreground/60 leading-relaxed">
                   {service.description}
                 </p>
               </CardContent>

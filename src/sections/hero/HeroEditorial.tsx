@@ -33,7 +33,7 @@ export default function HeroEditorial({
 
             <div className="mt-6 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
               <LinkButton href={ctaHref} size="lg" variant="default" className="btn-primary text-lg px-8 py-4">{ctaText}</LinkButton>
-              <LinkButton href="#services" variant="ghost" size="lg" className="text-foreground/60 hover:text-primary">
+              <LinkButton href="#services" variant="ghost" size="lg" className="text-base text-foreground/60 hover:text-primary">
                 Mehr erfahren
                 <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />

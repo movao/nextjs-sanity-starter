@@ -34,7 +34,7 @@ export default function ContactSplit({
                 <IconWrapper icon="map-pin" size={20} />
                 <div>
                   <p className="font-medium text-foreground">Adresse</p>
-                  <p className="text-foreground/60">
+                  <p className="text-base text-foreground/60">
                     {contact.address.street}<br />
                     {contact.address.zip} {contact.address.city}
                   </p>
@@ -45,7 +45,7 @@ export default function ContactSplit({
                 <IconWrapper icon="phone" size={20} />
                 <div>
                   <p className="font-medium text-foreground">Telefon</p>
-                  <a href={`tel:${contact.phone}`} className="text-foreground/60 hover:text-primary transition-colors">
+                  <a href={`tel:${contact.phone}`} className="text-base text-foreground/60 hover:text-primary transition-colors">
                     {contact.phone}
                   </a>
                 </div>
@@ -55,7 +55,7 @@ export default function ContactSplit({
                 <IconWrapper icon="envelope" size={20} />
                 <div>
                   <p className="font-medium text-foreground">E-Mail</p>
-                  <a href={`mailto:${contact.email}`} className="text-foreground/60 hover:text-primary transition-colors">
+                  <a href={`mailto:${contact.email}`} className="text-base text-foreground/60 hover:text-primary transition-colors">
                     {contact.email}
                   </a>
                 </div>

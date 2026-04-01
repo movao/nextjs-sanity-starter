@@ -70,7 +70,7 @@ export default function PricingCards({
               <CardContent className="p-0 mb-8">
                 <ul className="space-y-3">
                   {pkg.features.map((feature, fi) => (
-                    <li key={fi} className="flex items-start gap-3 text-foreground/60">
+                    <li key={fi} className="flex items-start gap-3 text-base text-foreground/60">
                       <svg
                         className="w-5 h-5 text-primary shrink-0 mt-0.5"
                         fill="none"

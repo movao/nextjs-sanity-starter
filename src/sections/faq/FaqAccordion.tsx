@@ -39,7 +39,7 @@ export default function FaqAccordion({
                 <AccordionTrigger className="py-5 font-medium text-foreground hover:text-primary transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="pb-5 text-foreground/60 leading-relaxed">
+                <AccordionContent className="pb-5 text-base text-foreground/60 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

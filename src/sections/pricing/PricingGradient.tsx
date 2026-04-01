@@ -73,7 +73,7 @@ export default function PricingGradient({
                     <span
                       className={cn(
                         'text-subtitle ml-1',
-                        pkg.highlighted ? 'text-background/70' : 'text-foreground/60',
+                        pkg.highlighted ? 'text-background/70' : 'text-base text-foreground/60',
                       )}
                     >
                       / {pkg.period}
@@ -89,7 +89,7 @@ export default function PricingGradient({
                       key={fi}
                       className={cn(
                         'flex items-start gap-3',
-                        pkg.highlighted ? 'text-background/80' : 'text-foreground/60',
+                        pkg.highlighted ? 'text-background/80' : 'text-base text-foreground/60',
                       )}
                     >
                       <svg

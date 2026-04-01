@@ -40,7 +40,7 @@ export default function AboutSplit({
           {/* Text + Highlights */}
           <div data-animate="fade-up" data-delay="200">
             <h2 className="section-heading text-left">{heading}</h2>
-            <p className="text-foreground/60 leading-relaxed mb-8">{text}</p>
+            <p className="text-base text-foreground/60 leading-relaxed mb-8">{text}</p>
 
             {highlights.length > 0 && (
               <div className="grid grid-cols-2 gap-6">

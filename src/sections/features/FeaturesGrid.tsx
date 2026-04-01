@@ -44,7 +44,7 @@ export default function FeaturesGrid({
                   {feature.title}
                 </h3>
 
-                <p className="text-foreground/60 leading-relaxed">
+                <p className="text-base text-foreground/60 leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

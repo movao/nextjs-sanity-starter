@@ -42,7 +42,7 @@ export default function FeaturesIconLeft({
                 <h3 className="text-xl font-heading text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-foreground/60 leading-relaxed text-base max-w-2xl">
+                <p className="text-base text-foreground/60 leading-relaxed text-base max-w-2xl">
                   {feature.description}
                 </p>
               </div>

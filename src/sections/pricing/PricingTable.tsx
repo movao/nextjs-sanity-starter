@@ -39,7 +39,7 @@ export default function PricingTable({
           <table className="w-full border-collapse">
             <thead>
               <tr>
-                <th className="text-left p-4 text-foreground/60 font-medium border-b border-border">
+                <th className="text-left p-4 text-base text-foreground/60 font-medium border-b border-border">
                   Feature
                 </th>
                 {packages.map((pkg, pi) => (
@@ -64,7 +64,7 @@ export default function PricingTable({
             <tbody>
               {allFeatures.map((feature, i) => (
                 <tr key={i} className={i % 2 === 0 ? 'bg-muted/30' : ''}>
-                  <td className="p-4 text-foreground/60 border-b border-border">
+                  <td className="p-4 text-base text-foreground/60 border-b border-border">
                     {feature}
                   </td>
                   {packages.map((pkg, pi) => (

@@ -40,7 +40,7 @@ export default function FeaturesNumbered({
                 <h3 className="text-xl font-heading text-foreground mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-foreground/60 leading-relaxed text-base">
+                <p className="text-base text-foreground/60 leading-relaxed text-base">
                   {feature.description}
                 </p>
               </div>

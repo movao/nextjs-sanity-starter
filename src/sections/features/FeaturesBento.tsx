@@ -59,7 +59,7 @@ export default function FeaturesBento({
                 </h3>
 
                 <p className={cn(
-                  'text-foreground/60 leading-relaxed',
+                  'text-base text-foreground/60 leading-relaxed',
                   i === 0 ? 'text-base md:text-lg' : 'text-base',
                 )}>
                   {feature.description}

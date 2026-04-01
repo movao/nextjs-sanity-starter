@@ -45,7 +45,7 @@ export default function FeaturesHighlight({
                 <h3 className="text-2xl md:text-3xl font-heading text-foreground mb-4">
                   {first.title}
                 </h3>
-                <p className="text-foreground/60 leading-relaxed text-base md:text-lg max-w-3xl">
+                <p className="text-base text-foreground/60 leading-relaxed text-base md:text-lg max-w-3xl">
                   {first.description}
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function FeaturesHighlight({
                   {feature.title}
                 </h3>
 
-                <p className="text-foreground/60 leading-relaxed text-base">
+                <p className="text-base text-foreground/60 leading-relaxed text-base">
                   {feature.description}
                 </p>
               </div>

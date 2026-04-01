@@ -32,7 +32,7 @@ export default function ContactWithInfo({
             </div>
             <div>
               <p className="font-medium text-foreground mb-1">Telefon</p>
-              <a href={`tel:${contact.phone}`} className="text-foreground/60 hover:text-primary transition-colors text-base">
+              <a href={`tel:${contact.phone}`} className="text-base text-foreground/60 hover:text-primary transition-colors text-base">
                 {contact.phone}
               </a>
             </div>
@@ -44,7 +44,7 @@ export default function ContactWithInfo({
             </div>
             <div>
               <p className="font-medium text-foreground mb-1">E-Mail</p>
-              <a href={`mailto:${contact.email}`} className="text-foreground/60 hover:text-primary transition-colors text-base">
+              <a href={`mailto:${contact.email}`} className="text-base text-foreground/60 hover:text-primary transition-colors text-base">
                 {contact.email}
               </a>
             </div>

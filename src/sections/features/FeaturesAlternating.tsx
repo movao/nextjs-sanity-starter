@@ -49,7 +49,7 @@ export default function FeaturesAlternating({
                     {feature.title}
                   </h3>
 
-                  <p className="text-foreground/60 leading-relaxed text-lg">
+                  <p className="text-base text-foreground/60 leading-relaxed text-lg">
                     {feature.description}
                   </p>
                 </div>

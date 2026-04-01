@@ -42,7 +42,7 @@ export default function FeaturesLargeCards({
                 {feature.title}
               </h3>
 
-              <p className="text-foreground/60 leading-relaxed text-base">
+              <p className="text-base text-foreground/60 leading-relaxed text-base">
                 {feature.description}
               </p>
             </div>

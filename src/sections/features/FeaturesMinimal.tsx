@@ -40,7 +40,7 @@ export default function FeaturesMinimal({
                 {feature.title}
               </h3>
 
-              <p className="text-foreground/60 leading-relaxed text-base">
+              <p className="text-base text-foreground/60 leading-relaxed text-base">
                 {feature.description}
               </p>
             </div>
