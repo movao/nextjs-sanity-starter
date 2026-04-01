@@ -60,7 +60,7 @@ function Summary({ ratings, total }: { ratings: RatingsMap; total: number }) {
   const commented = entries.filter((e) => e.comment.trim().length > 0).length;
 
   return (
-    <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+    <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
       <span className="font-medium text-foreground">{rated} / {total} bewertet</span>
       <span className="text-muted-foreground/30">|</span>
       <span className="text-green-600">{liked} gefaellt</span>
@@ -87,7 +87,7 @@ function RatingBar({
   return (
     <div className="flex items-center gap-3 px-4 py-3 bg-muted/40 border-t border-muted">
       {/* Badge */}
-      <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded shrink-0">
+      <span className="text-sm font-mono font-semibold text-primary bg-primary/10 px-2 py-0.5 rounded shrink-0">
         {name}
       </span>
 
@@ -124,7 +124,7 @@ function RatingBar({
         placeholder="Kommentar..."
         value={comment}
         onChange={(e) => onChange(name, { comment: e.target.value })}
-        className="flex-1 min-w-0 text-xs bg-background border border-muted rounded px-2 py-1.5 placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-primary/30"
+        className="flex-1 min-w-0 text-sm bg-background border border-muted rounded px-3 py-2 placeholder:text-muted-foreground/50 focus:outline-none focus:ring-1 focus:ring-primary/30"
       />
     </div>
   );
@@ -188,7 +188,7 @@ export default function PreviewShell({
           <div className="max-w-7xl mx-auto px-4">
             <TabsList variant="line" className="w-full justify-start overflow-x-auto scrollbar-hide gap-0">
               {groups.map((g) => (
-                <TabsTrigger key={g.id} value={g.id} className="shrink-0 px-3 py-2 text-xs font-medium">
+                <TabsTrigger key={g.id} value={g.id} className="shrink-0 px-3 py-2 text-sm font-medium">
                   {g.label} <span className="text-muted-foreground/50 ml-1">({g.sections.length})</span>
                 </TabsTrigger>
               ))}
