@@ -41,11 +41,11 @@ export default function HeroImmersive({
             {headline}
           </h1>
 
-          <p className="mt-8 text-subtitle text-background/80 max-w-2xl mx-auto animate-in animate-delay-1">
+          <p className="mt-2 text-subtitle text-background/80 max-w-2xl mx-auto animate-in animate-delay-1">
             {subheadline}
           </p>
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center animate-in animate-delay-2">
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center animate-in animate-delay-2">
             <LinkButton href={ctaHref} size="lg" variant="default" className="btn-primary text-lg px-10 py-5">{ctaText}</LinkButton>
             <LinkButton href="#services" variant="ghost" size="lg" className="text-background/80 hover:text-background">
               Mehr erfahren

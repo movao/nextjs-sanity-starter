@@ -22,7 +22,7 @@ export default function CtaMinimal({
             {heading}
           </h2>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <LinkButton href={ctaHref} className="px-10 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
           </div>
         </div>

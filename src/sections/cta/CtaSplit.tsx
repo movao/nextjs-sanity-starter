@@ -31,7 +31,7 @@ export default function CtaSplit({
               {heading}
             </h2>
             {subheading && (
-              <p className="mt-4 text-foreground/60 leading-relaxed">
+              <p className="mt-2 text-base text-foreground/60 leading-relaxed">
                 {subheading}
               </p>
             )}

@@ -27,7 +27,7 @@ export default function CtaCompact({
             </h2>
 
             {subheading && (
-              <p className="mt-3 text-foreground/60 leading-relaxed">
+              <p className="mt-3 text-base text-foreground/60 leading-relaxed">
                 {subheading}
               </p>
             )}

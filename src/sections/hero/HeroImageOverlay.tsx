@@ -48,12 +48,12 @@ export default function HeroImageOverlay({
           </h1>
 
           {subheadline && (
-            <p className="mt-8 text-subtitle text-background/80 max-w-2xl animate-in animate-delay-1">
+            <p className="mt-2 text-subtitle text-background/80 max-w-2xl animate-in animate-delay-1">
               {subheadline}
             </p>
           )}
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
             <LinkButton href={ctaHref} size="lg">{ctaText}</LinkButton>
             <LinkButton href={secondaryCtaHref} variant="outline" size="lg" className="border-background text-background hover:bg-background hover:text-foreground">{secondaryCtaText}</LinkButton>
           </div>

@@ -23,12 +23,12 @@ export default function HeroMinimal({
           </h1>
 
           {subheadline && (
-            <p className="mt-8 text-subtitle text-foreground/50 max-w-2xl animate-in animate-delay-1">
+            <p className="mt-2 text-subtitle text-foreground/50 max-w-2xl animate-in animate-delay-1">
               {subheadline}
             </p>
           )}
 
-          <div className="mt-12 animate-in animate-delay-2">
+          <div className="mt-6 animate-in animate-delay-2">
             <LinkButton href={ctaHref} variant="ghost" size="lg" className="group text-lg text-primary hover:text-primary/80">
               {ctaText}
               <svg

@@ -26,13 +26,13 @@ export default function CtaStacked({
           </h2>
 
           {subheading && (
-            <p className="mt-4 text-foreground/60 leading-relaxed">
+            <p className="mt-2 text-base text-foreground/60 leading-relaxed">
               {subheading}
             </p>
           )}
 
           {/* Benefit bullets */}
-          <ul className="mt-8 space-y-3 text-left inline-block">
+          <ul className="mt-6 space-y-3 text-left inline-block">
             <li className="flex items-center gap-3 text-foreground/70">
               <svg
                 className="w-5 h-5 text-primary shrink-0"
@@ -71,7 +71,7 @@ export default function CtaStacked({
             </li>
           </ul>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <LinkButton href={ctaHref} className="px-10 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
 
             {secondaryCtaText && secondaryCtaHref && (

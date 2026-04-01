@@ -41,12 +41,12 @@ export default function HeroAsymmetric({
             </h1>
 
             {subheadline && (
-              <p className="mt-8 text-subtitle text-foreground/60 max-w-lg animate-in animate-delay-2">
+              <p className="mt-2 text-subtitle text-foreground/60 max-w-lg animate-in animate-delay-2">
                 {subheadline}
               </p>
             )}
 
-            <div className="mt-12 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
               <LinkButton href={ctaHref} size="lg">{ctaText}</LinkButton>
               <LinkButton href={secondaryCtaHref} variant="outline" size="lg">{secondaryCtaText}</LinkButton>
             </div>

@@ -34,11 +34,11 @@ export default function CtaWithTestimonial({
               {heading}
             </h2>
             {subheading && (
-              <p className="mt-4 text-foreground/60 leading-relaxed">
+              <p className="mt-2 text-base text-foreground/60 leading-relaxed">
                 {subheading}
               </p>
             )}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
               <LinkButton href={ctaHref} className="px-8 py-4 rounded-xl font-medium bg-primary text-background hover:bg-primary/90 transition-colors">{ctaText}</LinkButton>
               {secondaryCtaText && secondaryCtaHref && (
                 <LinkButton href={secondaryCtaHref} variant="outline"

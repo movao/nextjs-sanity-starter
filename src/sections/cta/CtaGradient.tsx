@@ -30,12 +30,12 @@ export default function CtaGradient({
           </h2>
 
           {subheading && (
-            <p className="mt-6 text-subtitle text-background/80 max-w-2xl mx-auto">
+            <p className="mt-2 text-subtitle text-background/80 max-w-2xl mx-auto">
               {subheading}
             </p>
           )}
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
             <LinkButton href={ctaHref} size="lg" className="bg-background text-foreground hover:bg-background/90 shadow-lg text-lg px-10 py-4">
               {ctaText}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

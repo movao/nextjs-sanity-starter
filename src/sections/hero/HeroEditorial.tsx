@@ -27,11 +27,11 @@ export default function HeroEditorial({
               {headline}
             </h1>
 
-            <p className="mt-6 text-lg text-foreground/60 max-w-lg animate-in animate-delay-1">
+            <p className="mt-2 text-lg text-foreground/60 max-w-lg animate-in animate-delay-1">
               {subheadline}
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 animate-in animate-delay-2">
               <LinkButton href={ctaHref} size="lg" variant="default" className="btn-primary text-lg px-8 py-4">{ctaText}</LinkButton>
               <LinkButton href="#services" variant="ghost" size="lg" className="text-foreground/60 hover:text-primary">
                 Mehr erfahren
